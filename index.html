@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olympia 2026 — September 24–27 — Las Vegas | Get Tickets</title>
+<meta name="description" content="Joe Weider's Olympia Fitness & Performance Weekend. Sept 24–27, 2026, Las Vegas. Derek Lunsford defends the Sandow. Get Finals, Expo & Amateur tickets now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#070707;
+  --near:#0f0e0e;
+  --panel:#141111;
+  --gold:#d22d31;
+  --gold-hi:#f0494d;
+  --gold-lo:#8f1a1d;
+  --white:#f5f2ea;
+  --muted:#b3b3b3;
+  --red:#d22d31;
+  --display:'Anton',Impact,sans-serif;
+  --head:'Oswald',sans-serif;
+  --body:'Inter',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.gold-text{background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 45%,var(--gold-lo) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.35em;text-transform:uppercase;font-size:.8rem;color:var(--gold)}
+.section-title{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+.btn{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;text-align:center;padding:18px 44px;font-size:1.05rem;transition:transform .15s ease,box-shadow .15s ease}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:#ffffff;box-shadow:0 0 0 1px rgba(240,73,77,.5),0 8px 30px rgba(210,45,49,.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(240,73,77,.7),0 14px 40px rgba(210,45,49,.5)}
+.btn-ghost{border:2px solid var(--gold);color:var(--gold)}
+.btn-ghost:hover{background:rgba(210,45,49,.1);transform:translateY(-2px)}
+
+/* ============ NAV ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(210,45,49,.25)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{font-family:var(--display);font-size:1.5rem;letter-spacing:.06em;text-decoration:none}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--head);font-weight:500;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .15s}
+.nav-links a:hover{color:var(--gold-hi)}
+.nav-cta{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:#ffffff!important;padding:10px 22px;font-weight:700!important}
+@media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;background:
+  radial-gradient(1200px 600px at 50% -10%,rgba(210,45,49,.22),transparent 60%),
+  radial-gradient(900px 500px at 15% 110%,rgba(210,45,49,.12),transparent 60%),
+  radial-gradient(900px 500px at 85% 110%,rgba(210,45,49,.10),transparent 60%),
+  var(--black)}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,transparent 0 120px,rgba(210,45,49,.03) 120px 121px);pointer-events:none}
+.hero-date{font-family:var(--head);font-weight:600;letter-spacing:.4em;text-transform:uppercase;font-size:clamp(.75rem,2vw,1rem);color:var(--gold-hi);margin-bottom:18px}
+.hero h1{font-family:var(--display);font-size:clamp(3.2rem,11vw,9rem);line-height:.9;text-transform:uppercase;margin-bottom:10px;color:#fff;text-shadow:0 6px 60px rgba(210,45,49,.45)}
+.hero-sub{font-family:var(--display);font-size:clamp(1.4rem,4vw,2.8rem);text-transform:uppercase;letter-spacing:.05em;margin-bottom:22px}
+.hero-tag{max-width:640px;color:var(--muted);font-size:clamp(.95rem,2vw,1.1rem);margin-bottom:36px}
+.hero-tag strong{color:var(--white)}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:56px}
+.stat-strip{display:flex;gap:0;justify-content:center;flex-wrap:wrap;border-top:1px solid rgba(210,45,49,.3);border-bottom:1px solid rgba(210,45,49,.3)}
+.stat{padding:18px 34px;text-align:center;border-right:1px solid rgba(210,45,49,.15)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-family:var(--display);font-size:2rem;color:var(--gold)}
+.stat span{font-family:var(--head);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+
+/* ============ COUNTDOWN ============ */
+.countdown{display:flex;gap:14px;justify-content:center;margin:0 0 40px}
+.cd-cell{background:var(--panel);border:1px solid rgba(210,45,49,.35);min-width:92px;padding:16px 10px 12px}
+.cd-cell b{display:block;font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--gold-hi)}
+.cd-cell span{font-family:var(--head);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:520px){.cd-cell{min-width:72px;padding:12px 6px 10px}.cd-cell b{font-size:1.9rem}}
+
+/* ============ MARQUEE ============ */
+.marquee{background:linear-gradient(90deg,#8f1a1d,#d22d31,#8f1a1d);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;border-top:1px solid rgba(0,0,0,.4);border-bottom:1px solid rgba(0,0,0,.4)}
+.marquee-inner{display:inline-block;animation:scroll 28s linear infinite;font-family:var(--head);font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.9rem}
+.marquee-inner span{margin:0 28px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ MAIN EVENT ============ */
+.main-event{padding:110px 0;background:linear-gradient(180deg,var(--black),var(--near))}
+.me-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media(max-width:880px){.me-grid{grid-template-columns:1fr}}
+.me-copy p{color:var(--muted);margin:22px 0;font-size:1.05rem}
+.me-copy p strong{color:var(--white)}
+.champ-card{background:var(--panel);border:1px solid rgba(210,45,49,.4);padding:44px 40px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.champ-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi),var(--gold-lo))}
+.champ-label{font-family:var(--head);font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.champ-name{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.4rem);line-height:.95;text-transform:uppercase}
+.champ-meta{margin-top:22px;border-top:1px solid rgba(210,45,49,.2);padding-top:20px;display:grid;gap:12px}
+.champ-meta div{display:flex;justify-content:space-between;font-family:var(--head);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase}
+.champ-meta span{color:var(--muted)}
+.champ-meta b{color:var(--gold-hi)}
+.champs-row{margin-top:70px}
+.champs-row h3{font-family:var(--head);font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:.85rem;color:var(--muted);text-align:center;margin-bottom:28px}
+.champs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(210,45,49,.2);border:1px solid rgba(210,45,49,.2)}
+.champ-tile{background:var(--near);padding:20px 16px;text-align:center}
+.champ-tile b{display:block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1rem}
+.champ-tile span{font-family:var(--head);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+/* ============ VIDEO ============ */
+.video-sec{padding:100px 0;text-align:center;background:var(--black)}
+.video-frame{position:relative;max-width:960px;margin:44px auto 0;aspect-ratio:16/9;border:1px solid rgba(210,45,49,.4);box-shadow:0 0 80px rgba(210,45,49,.15)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ============ SCHEDULE ============ */
+.schedule{padding:110px 0;background:linear-gradient(180deg,var(--near),var(--black))}
+.sched-head{text-align:center;max-width:760px;margin:0 auto 60px}
+.sched-head p{color:var(--muted);margin-top:18px}
+.day-card{display:grid;grid-template-columns:220px 1fr;gap:0;background:var(--panel);border:1px solid rgba(210,45,49,.25);margin-bottom:22px;overflow:hidden}
+@media(max-width:760px){.day-card{grid-template-columns:1fr}}
+.day-side{background:linear-gradient(160deg,rgba(210,45,49,.16),rgba(210,45,49,.03));padding:32px 26px;border-right:1px solid rgba(210,45,49,.25);display:flex;flex-direction:column;justify-content:center}
+@media(max-width:760px){.day-side{border-right:none;border-bottom:1px solid rgba(210,45,49,.25)}}
+.day-side .dnum{font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--gold-hi)}
+.day-side .dname{font-family:var(--head);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:1rem;margin-top:4px}
+.day-side .dtag{font-family:var(--head);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-top:10px;font-weight:600}
+.day-body{padding:30px 34px}
+.day-body h4{font-family:var(--display);font-size:1.7rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:14px}
+.day-body ul{list-style:none;display:grid;gap:10px}
+.day-body li{display:flex;gap:14px;color:var(--muted);font-size:.95rem}
+.day-body li b{font-family:var(--head);font-weight:600;color:var(--gold);min-width:86px;letter-spacing:.05em}
+.day-body li strong{color:var(--white)}
+.main-night{border-color:var(--gold);box-shadow:0 0 60px rgba(210,45,49,.18)}
+.main-night .day-side{background:linear-gradient(160deg,rgba(210,45,49,.35),rgba(210,45,49,.08))}
+
+/* ============ EXPO ============ */
+.expo{padding:110px 0;background:radial-gradient(1000px 500px at 50% 0%,rgba(210,45,49,.10),transparent 60%),var(--near)}
+.expo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+@media(max-width:1000px){.expo-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.expo-grid{grid-template-columns:1fr}}
+.expo-card{background:var(--panel);border:1px solid rgba(210,45,49,.25);padding:32px 28px}
+.expo-card .num{font-family:var(--display);font-size:2.4rem;color:var(--gold)}
+.expo-card h4{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:1rem;margin:8px 0 10px}
+.expo-card p{color:var(--muted);font-size:.92rem}
+
+/* ============ TICKETS ============ */
+.tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
+.tix-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:56px;align-items:stretch}
+.tix-card{background:var(--panel);border:1px solid rgba(210,45,49,.3);padding:38px 32px;display:flex;flex-direction:column;position:relative}
+.tix-card.featured{border:2px solid var(--gold);box-shadow:0 0 60px rgba(210,45,49,.25);background:linear-gradient(180deg,#1d0e0f,var(--panel))}
+.tix-flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#ffffff;font-family:var(--head);font-weight:700;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;padding:6px 18px;white-space:nowrap}
+.tix-flag.red{background:var(--red);color:var(--white)}
+.tix-card h3{font-family:var(--display);font-size:1.9rem;text-transform:uppercase;margin-bottom:4px}
+.tix-card .tix-sub{font-family:var(--head);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.tix-card ul{list-style:none;display:grid;gap:11px;margin-bottom:28px;flex:1}
+.tix-card li{padding-left:26px;position:relative;color:var(--muted);font-size:.92rem}
+.tix-card li::before{content:"★";position:absolute;left:0;color:var(--gold);font-size:.8rem}
+.tix-card li strong{color:var(--white)}
+.tix-card .btn{width:100%;padding:16px 10px}
+.tix-card.soldout{opacity:.65}
+.tix-card.soldout .btn{background:none;border:2px solid #4a4a4a;color:#8a8a8a;pointer-events:none}
+.tix-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:30px}
+
+/* ============ VENUES ============ */
+.venues{padding:110px 0;background:var(--near)}
+.venue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:52px}
+.venue-card{border:1px solid rgba(210,45,49,.25);background:var(--panel);padding:34px 30px}
+.venue-card .vlabel{font-family:var(--head);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:600}
+.venue-card h4{font-family:var(--display);font-size:1.8rem;text-transform:uppercase;margin:8px 0 6px}
+.venue-card address{font-style:normal;color:var(--muted);font-size:.92rem;margin-bottom:12px}
+.venue-card p{color:var(--muted);font-size:.92rem}
+.shuttle{margin-top:34px;text-align:center;font-family:var(--head);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;color:var(--gold);border:1px dashed rgba(210,45,49,.4);padding:18px}
+
+/* ============ FINAL CTA ============ */
+.final-cta{padding:130px 24px;text-align:center;background:
+  radial-gradient(900px 500px at 50% 100%,rgba(210,45,49,.25),transparent 65%),var(--black)}
+.final-cta h2{font-family:var(--display);font-size:clamp(2.8rem,8vw,6rem);line-height:.92;text-transform:uppercase;margin-bottom:20px}
+.final-cta p{color:var(--muted);max-width:560px;margin:0 auto 40px}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid rgba(210,45,49,.2);padding:44px 24px;background:var(--black)}
+.foot-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.foot-inner .nav-logo{font-size:1.3rem}
+footer p{color:#7a7a7a;font-size:.8rem}
+footer a{color:var(--muted);text-decoration:none;font-size:.8rem}
+footer a:hover{color:var(--gold)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><span class="gold-text">OLYMPIA</span>&nbsp;2026</a>
+    <div class="nav-links">
+      <a href="#main-event">Main Event</a>
+      <a href="#weekend">The Weekend</a>
+      <a href="#expo">Expo</a>
+      <a href="#venues">Venues</a>
+      <a href="#tickets" class="nav-cta">Get Tickets</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-date">September 24–27, 2026 &nbsp;•&nbsp; Las Vegas, NV</div>
+  <h1>Olympia</h1>
+  <div class="hero-sub gold-text">The Top of the Mountain</div>
+  <p class="hero-tag">Joe Weider's Olympia Fitness &amp; Performance Weekend returns to Las Vegas. <strong>Four days. Eleven Olympia titles. One Sandow.</strong> The biggest weekend in bodybuilding history is coming — and you can be in the building when it happens.</p>
+  <div class="countdown" id="countdown" aria-label="Countdown to Olympia weekend">
+    <div class="cd-cell"><b id="cd-d">–</b><span>Days</span></div>
+    <div class="cd-cell"><b id="cd-h">–</b><span>Hours</span></div>
+    <div class="cd-cell"><b id="cd-m">–</b><span>Mins</span></div>
+    <div class="cd-cell"><b id="cd-s">–</b><span>Secs</span></div>
+  </div>
+  <div class="hero-ctas">
+    <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
+    <a class="btn btn-ghost" href="#weekend">See the Weekend</a>
+  </div>
+  <div class="stat-strip">
+    <div class="stat"><b>4</b><span>Days</span></div>
+    <div class="stat"><b>11</b><span>Olympia Titles</span></div>
+    <div class="stat"><b>60+</b><span>Expo Brands</span></div>
+    <div class="stat"><b>1</b><span>Sandow</span></div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals — Orleans Arena</span><span>★ Saturday Night — Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
+    <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals — Orleans Arena</span><span>★ Saturday Night — Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
+  </div>
+</div>
+
+<!-- MAIN EVENT -->
+<section class="main-event" id="main-event">
+  <div class="wrap">
+    <div class="me-grid">
+      <div class="me-copy">
+        <div class="eyebrow">The Main Event</div>
+        <h2 class="section-title">The Sandow Is <span class="gold-text">On The Line</span></h2>
+        <p><strong>Derek Lunsford did what only Jay Cutler had ever done</strong> — he lost the Sandow, and he took it back. Now the reigning, defending Mr. Olympia walks into Orleans Arena with every hungry challenger on the planet gunning for the greatest prize in the sport.</p>
+        <p>The heaviest hitters in bodybuilding. One stage. One judge's call. And a Las Vegas crowd that will lose its mind when the final pose hits. <strong>You don't watch this one on your phone. You're there.</strong></p>
+        <a class="btn btn-gold" href="#tickets">Be There When It Happens</a>
+      </div>
+      <div class="champ-card">
+        <div class="champ-label">Reigning • Defending</div>
+        <div class="champ-name gold-text">Derek<br>Lunsford</div>
+        <div class="champ-meta">
+          <div><span>Title</span><b>Mr. Olympia</b></div>
+          <div><span>Defends</span><b>Sat, Sept 26</b></div>
+          <div><span>Stage</span><b>Orleans Arena</b></div>
+          <div><span>Top Prize</span><b>$600,000</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="champs-row">
+      <h3>Every Crown Gets Defended</h3>
+      <div class="champs-grid">
+        <div class="champ-tile"><span>Classic Physique</span><b>Ramon Dino</b></div>
+        <div class="champ-tile"><span>Men's Physique</span><b>Ryan Terry</b></div>
+        <div class="champ-tile"><span>Ms. Olympia</span><b>Andrea Shaw</b></div>
+        <div class="champ-tile"><span>Bikini</span><b>Maureen Blanquisco</b></div>
+        <div class="champ-tile"><span>Wellness</span><b>Eduarda Bezerra</b></div>
+        <div class="champ-tile"><span>Figure</span><b>Rhea Gayle</b></div>
+        <div class="champ-tile"><span>Women's Physique</span><b>Natalia Coelho</b></div>
+        <div class="champ-tile"><span>Fitness</span><b>Michelle Fredua-Mensah</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-sec">
+  <div class="wrap">
+    <div class="eyebrow">Feel It</div>
+    <h2 class="section-title">This Is <span class="gold-text">Olympia</span></h2>
+    <div class="video-frame">
+      <iframe src="https://www.youtube.com/embed/njSC3gMfjjU" title="Olympia Hype Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKEND SCHEDULE -->
+<section class="schedule" id="weekend">
+  <div class="wrap">
+    <div class="sched-head">
+      <div class="eyebrow">Four Days • One City</div>
+      <h2 class="section-title">The <span class="gold-text">Weekend</span></h2>
+      <p>This isn't a show. It's a takeover. From the Thursday kickoff party at the Palms to Sunday's champions seminar, Las Vegas belongs to the Olympia.</p>
+    </div>
+
+    <div class="day-card">
+      <div class="day-side">
+        <div class="dnum">24</div>
+        <div class="dname">Thursday</div>
+        <div class="dtag">The Arrival</div>
+      </div>
+      <div class="day-body">
+        <h4>Opening Day at the Palms</h4>
+        <ul>
+          <li><b>6:00 AM</b><span><strong>Olympia × Dragon's Lair Pop-Up Gym</strong> — train where the pros train, open to the public all day</span></li>
+          <li><b>12:00 PM</b><span><strong>Olympia Press Conference</strong> — Pearl Theater. Face-offs, callouts, and the first sparks of the weekend</span></li>
+          <li><b>7:00 PM</b><span><strong>Superstar Kickoff Party</strong> — Palms Pool. The athletes, the brands, the scene. Vegas is officially on notice</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-side">
+        <div class="dnum">25</div>
+        <div class="dname">Friday</div>
+        <div class="dtag">Friday Night Finals</div>
+      </div>
+      <div class="day-body">
+        <h4>Six Titles Decided in One Night</h4>
+        <ul>
+          <li><b>9:00 AM</b><span><strong>Olympia World Fitness Expo opens</strong> — Las Vegas Convention Center South Hall (VIP entry 8 AM)</span></li>
+          <li><b>9:30 AM</b><span><strong>Pre-Judging</strong> — 212, Classic Physique, Figure, Women's Physique, Ms. Olympia, Wellness</span></li>
+          <li><b>6:00 PM</b><span><strong>Friday Finals at Orleans Arena</strong> — six champions crowned, PLUS Mr. Olympia Pre-Judging. Lunsford and the contenders hit the stage for the first time</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day-card main-night">
+      <div class="day-side">
+        <div class="dnum">26</div>
+        <div class="dname">Saturday</div>
+        <div class="dtag">★ Championship Saturday</div>
+      </div>
+      <div class="day-body">
+        <h4>Mr. Olympia Is Crowned</h4>
+        <ul>
+          <li><b>9:00 AM</b><span><strong>Expo Day Two</strong> — last chance on the floor with the biggest brands and athletes in fitness</span></li>
+          <li><b>9:30 AM</b><span><strong>Pre-Judging</strong> — Men's Physique, Fitness, Bikini, plus Wheelchair &amp; Fit Model Olympia</span></li>
+          <li><b>7:00 PM</b><span><strong>Saturday Finals at Orleans Arena</strong> — Fitness, Men's Physique, Bikini… and then the moment the world is waiting for: <strong>the crowning of Mr. Olympia</strong></span></li>
+          <li><b>11:00 PM</b><span><strong>VIP After Party</strong> — Kaos Nightclub at the Palms. Celebrate with the champions</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-side">
+        <div class="dnum">27</div>
+        <div class="dname">Sunday</div>
+        <div class="dtag">The Send-Off</div>
+      </div>
+      <div class="day-body">
+        <h4>Learn From the Champions</h4>
+        <ul>
+          <li><b>11:00 AM</b><span><strong>Olympia Champions Seminar</strong> — Palms Grand Ballroom. The newly crowned champs break down how they did it, hours after the confetti falls</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPO -->
+<section class="expo" id="expo">
+  <div class="wrap">
+    <div class="eyebrow">Friday &amp; Saturday • LV Convention Center</div>
+    <h2 class="section-title">Olympia World <span class="gold-text">Fitness Expo</span></h2>
+    <div class="expo-grid">
+      <div class="expo-card">
+        <div class="num">60+</div>
+        <h4>The Biggest Brands</h4>
+        <p>GNC, Optimum Nutrition, Gymreapers, MYPROTEIN and dozens more — exclusive drops, samples, and deals you only get on the floor.</p>
+      </div>
+      <div class="expo-card">
+        <div class="num">★</div>
+        <h4>Meet the Olympians</h4>
+        <p>The legends and the champions of tomorrow — photos, signings, and moments you can't get anywhere else on earth.</p>
+      </div>
+      <div class="expo-card">
+        <div class="num">2</div>
+        <h4>Days of Mayhem</h4>
+        <p>Live athlete appearances, contests, and the amateur Olympia stage — the expo is an event all by itself.</p>
+      </div>
+      <div class="expo-card">
+        <div class="num">1</div>
+        <h4>Elite Status</h4>
+        <p>Limited Expo Elite passes unlock early entry and the ultimate expo experience. When they're gone, they're gone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section class="tickets" id="tickets">
+  <div class="wrap">
+    <div class="sched-head">
+      <div class="eyebrow">On Sale Now</div>
+      <h2 class="section-title">Claim Your <span class="gold-text">Seat</span></h2>
+      <p style="color:var(--muted);margin-top:18px">VIP packages are already <strong style="color:var(--white)">SOLD OUT</strong>. Finals seats and Expo passes are moving. Lock yours before Vegas sells out.</p>
+    </div>
+    <div class="tix-grid">
+      <div class="tix-card featured">
+        <div class="tix-flag">Most Wanted</div>
+        <h3>Finals Tickets</h3>
+        <div class="tix-sub">Orleans Arena • Fri &amp; Sat</div>
+        <ul>
+          <li><strong>Friday Night:</strong> Finals of 212, Classic Physique, Figure, Women's Physique, Ms. Olympia &amp; Wellness — plus Mr. Olympia Pre-Judging</li>
+          <li><strong>Saturday Night:</strong> Finals of Fitness, Men's Physique, Bikini — and the crowning of <strong>Mr. Olympia</strong></li>
+          <li>Be in the arena for the biggest moment in bodybuilding</li>
+        </ul>
+        <a class="btn btn-gold" href="https://mrolympia.com/ticket-type">Buy Finals Tickets</a>
+      </div>
+      <div class="tix-card">
+        <h3>Expo Passes</h3>
+        <div class="tix-sub">LV Convention Center • Fri, Sat or Weekend</div>
+        <ul>
+          <li>Friday, Saturday, and full Weekend passes available</li>
+          <li>60+ brands, athlete meet &amp; greets, exclusive expo-only deals</li>
+          <li><strong>Expo Elite Status</strong> — early entry, ultimate access, limited quantity</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://mrolympia.com/ticket-type">Buy Expo Passes</a>
+      </div>
+      <div class="tix-card">
+        <h3>Amateur Olympia</h3>
+        <div class="tix-sub">Watch the Next Generation</div>
+        <ul>
+          <li>See tomorrow's Olympians earn their shot on the amateur stage</li>
+          <li>The proving ground of the sport — where careers are born</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://mrolympia.com/ticket-type">Buy Amateur Tickets</a>
+      </div>
+      <div class="tix-card soldout">
+        <div class="tix-flag red">Sold Out</div>
+        <h3>VIP Packages</h3>
+        <div class="tix-sub">Gone. Every Last One.</div>
+        <ul>
+          <li>Sandow photo ops, VIP entry, after party at Kaos — claimed within days</li>
+          <li>Don't let Finals tickets go the same way</li>
+        </ul>
+        <span class="btn">Sold Out</span>
+      </div>
+    </div>
+    <p class="tix-note">Finals tickets fulfilled via Ticketmaster • Expo passes via Fevo • Amateur Olympia via AXS — all through the official Olympia ticket portal.</p>
+  </div>
+</section>
+
+<!-- VENUES -->
+<section class="venues" id="venues">
+  <div class="wrap">
+    <div class="sched-head">
+      <div class="eyebrow">Plan Your Takeover</div>
+      <h2 class="section-title">Three Venues. <span class="gold-text">One City.</span></h2>
+    </div>
+    <div class="venue-grid">
+      <div class="venue-card">
+        <div class="vlabel">The Arena</div>
+        <h4>Orleans Arena</h4>
+        <address>4500 W Tropicana Ave, Las Vegas</address>
+        <p>Friday &amp; Saturday night Finals. This is where the Sandow changes hands — or doesn't.</p>
+      </div>
+      <div class="venue-card">
+        <div class="vlabel">The Expo</div>
+        <h4>LV Convention Center</h4>
+        <address>3150 Paradise Rd — South Hall</address>
+        <p>The Olympia World Fitness Expo, Friday and Saturday. The floor where the whole industry shows up.</p>
+      </div>
+      <div class="venue-card">
+        <div class="vlabel">Host Hotel</div>
+        <h4>The Palms</h4>
+        <address>4321 W Flamingo Rd, Las Vegas</address>
+        <p>Press conference, kickoff party, pop-up gym, seminars and the after party. Stay where it all happens.</p>
+      </div>
+    </div>
+    <div class="shuttle">Free shuttles run between all venues every 20 minutes, Friday &amp; Saturday</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="eyebrow">September 24–27 • Las Vegas</div>
+  <h2>Don't Watch History.<br><span class="gold-text">Witness It.</span></h2>
+  <p>One weekend a year, the strongest stage on the planet decides who stands at the top of the mountain. Be in the building.</p>
+  <a class="btn btn-gold" href="https://mrolympia.com/ticket-type">Get Your Tickets Now</a>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <a href="#" class="nav-logo"><span class="gold-text">OLYMPIA</span>&nbsp;2026</a>
+    <div class="foot-links">
+      <a href="https://mrolympia.com/">MrOlympia.com</a>
+      <a href="https://mrolympia.com/ticket-type">Tickets</a>
+      <a href="https://mrolympia.com/travel-accommodations">Hotel &amp; Travel</a>
+      <a href="https://mrolympia.com/FAQ">FAQ</a>
+    </div>
+    <p>Joe Weider's Olympia Fitness &amp; Performance Weekend • Title Sponsor: Newtech Wellness</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var target = new Date('2026-09-24T12:00:00-07:00').getTime();
+  var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),s=document.getElementById('cd-s');
+  function tick(){
+    var diff = target - Date.now();
+    if(diff<0)diff=0;
+    d.textContent = Math.floor(diff/864e5);
+    h.textContent = String(Math.floor(diff%864e5/36e5)).padStart(2,'0');
+    m.textContent = String(Math.floor(diff%36e5/6e4)).padStart(2,'0');
+    s.textContent = String(Math.floor(diff%6e4/1e3)).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
