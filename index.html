@@ -136,6 +136,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .expo-card h4{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:1rem;margin:8px 0 10px}
 .expo-card p{color:var(--muted);font-size:.92rem}
 
+/* ============ SOCIAL ============ */
+.social{padding:110px 0;background:linear-gradient(180deg,var(--black),var(--near))}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:20px;align-items:start}
+@media(max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.ig-grid{grid-template-columns:1fr}}
+.ig-grid .instagram-media{width:100%!important;min-width:0!important;max-width:100%!important;margin:0!important;border:1px solid rgba(210,45,49,.35)!important;border-radius:4px;background:var(--panel)}
+.ig-grid blockquote a{color:var(--muted);display:block;padding:20px;font-size:.9rem}
+
 /* ============ TICKETS ============ */
 .tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
 .tix-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:56px;align-items:stretch}
@@ -189,6 +197,7 @@ footer a:hover{color:var(--gold)}
       <a href="#main-event">Main Event</a>
       <a href="#weekend">The Weekend</a>
       <a href="#expo">Expo</a>
+      <a href="#social">Social</a>
       <a href="#venues">Venues</a>
       <a href="#tickets" class="nav-cta">Get Tickets</a>
     </div>
@@ -380,6 +389,28 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<!-- SOCIAL -->
+<section class="social" id="social">
+  <div class="wrap">
+    <div class="sched-head">
+      <div class="eyebrow">@mrolympiallc</div>
+      <h2 class="section-title">The Hype Is <span class="gold-text">Real</span></h2>
+      <p style="color:var(--muted);margin-top:18px">The athletes are training. The callouts have started. Follow the road to Vegas as it happens.</p>
+    </div>
+    <div class="ig-grid">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dcb-nZAnWWF/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dcb-nZAnWWF/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbosDhiVZo/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbosDhiVZo/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcbOiGtB-dB/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcbOiGtB-dB/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbApMtgjxX/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbApMtgjxX/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dca1P27gIaB/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dca1P27gIaB/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcYV9UEAASg/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcYV9UEAASg/">View this post from @mrolympiallc</a></blockquote>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a class="btn btn-ghost" href="https://www.instagram.com/mrolympiallc/" target="_blank" rel="noopener">Follow @mrolympiallc</a>
+    </div>
+  </div>
+</section>
+
 <!-- TICKETS -->
 <section class="tickets" id="tickets">
   <div class="wrap">
@@ -502,5 +533,6 @@ footer a:hover{color:var(--gold)}
   setInterval(tick,1000);
 })();
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
