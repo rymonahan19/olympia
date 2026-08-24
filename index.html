@@ -140,9 +140,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .social{padding:110px 0;background:linear-gradient(180deg,var(--black),var(--near))}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:20px;align-items:start}
 @media(max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.ig-grid{grid-template-columns:1fr}}
+@media(max-width:680px){.ig-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:16px;margin:20px -24px 0;padding:0 24px 14px;scrollbar-width:none}.ig-grid::-webkit-scrollbar{display:none}.ig-grid .instagram-media{flex:0 0 82vw;scroll-snap-align:center}.swipe-hint{display:block}}
 .ig-grid .instagram-media{width:100%!important;min-width:0!important;max-width:100%!important;margin:0!important;border:1px solid rgba(210,45,49,.35)!important;border-radius:4px;background:var(--panel)}
 .ig-grid blockquote a{color:var(--muted);display:block;padding:20px;font-size:.9rem}
+.swipe-hint{display:none;text-align:center;font-family:var(--head);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 
 /* ============ TICKETS ============ */
 .tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
@@ -405,6 +406,7 @@ footer a:hover{color:var(--gold)}
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dca1P27gIaB/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dca1P27gIaB/">View this post from @mrolympiallc</a></blockquote>
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcYV9UEAASg/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcYV9UEAASg/">View this post from @mrolympiallc</a></blockquote>
     </div>
+    <div class="swipe-hint">Swipe &rarr;</div>
     <div style="text-align:center;margin-top:40px">
       <a class="btn btn-ghost" href="https://www.instagram.com/mrolympiallc/" target="_blank" rel="noopener">Follow @mrolympiallc</a>
     </div>
