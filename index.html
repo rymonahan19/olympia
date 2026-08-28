@@ -137,6 +137,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .day-body li{display:flex;gap:14px;color:var(--muted);font-size:.95rem}
 .day-body li b{font-family:var(--head);font-weight:600;color:var(--gold);min-width:86px;letter-spacing:.05em}
 .day-body li strong{color:var(--white)}
+.day-body a{color:var(--white);text-decoration:underline;text-decoration-color:rgba(240,73,77,.75);text-underline-offset:3px;transition:color .15s}
+.day-body a:hover{color:#f0494d}
 .main-night{border-color:var(--gold);box-shadow:0 0 60px rgba(210,45,49,.18)}
 .main-night .day-side{background:linear-gradient(160deg,rgba(210,45,49,.35),rgba(210,45,49,.08))}
 
@@ -240,8 +242,8 @@ footer a:hover{color:var(--gold)}
       <a href="#main-event">Main Event</a>
       <a href="#weekend">Schedule</a>
       <a href="#expo">Expo</a>
-      <a href="#social">Social</a>
       <a href="#venues">Venues</a>
+      <a href="#social">Social</a>
       <a href="#tickets" class="nav-cta">Get Tickets</a>
     </div>
   </div>
@@ -338,9 +340,9 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Opening Day at the Palms</h4>
         <ul>
-          <li><b>6:00 AM</b><span><strong>Olympia × Dragon's Lair Pop-Up Gym</strong> — train where the pros train, open to the public all day</span></li>
-          <li><b>12:00 PM</b><span><strong>Olympia Press Conference</strong> — Pearl Theater. Face-offs, callouts, and the first sparks of the weekend</span></li>
-          <li><b>7:00 PM</b><span><strong>Superstar Kickoff Party</strong> — Palms Pool. The athletes, the brands, the scene. Vegas is officially on notice</span></li>
+          <li><b>6:00 AM</b><span><strong>Olympia × Dragon's Lair Pop-Up Gym</strong> — <a href="https://www.palms.com/" target="_blank" rel="noopener">at the Palms</a>, train where the pros train, open to the public all day</span></li>
+          <li><b>12:00 PM</b><span><strong>Olympia Press Conference</strong> — <a href="https://www.palms.com/entertainment/pearl-theater" target="_blank" rel="noopener">Pearl Theater</a>. Face-offs, callouts, and the first sparks of the weekend</span></li>
+          <li><b>7:00 PM</b><span><strong>Superstar Kickoff Party</strong> — <a href="https://www.palms.com/experiences/palms-pool" target="_blank" rel="noopener">Palms Pool</a>. The athletes, the brands, the scene. Vegas is officially on notice</span></li>
         </ul>
       </div>
     </div>
@@ -354,9 +356,9 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Six Titles Decided in One Night</h4>
         <ul>
-          <li><b>9:00 AM</b><span><strong>Olympia World Fitness Expo opens</strong> — Las Vegas Convention Center South Hall (VIP entry 8 AM)</span></li>
+          <li><b>9:00 AM</b><span><strong>Olympia World Fitness Expo opens</strong> — <a href="https://www.lvcva.com/" target="_blank" rel="noopener">Las Vegas Convention Center</a> South Hall (VIP entry 8 AM)</span></li>
           <li><b>9:30 AM</b><span><strong>Pre-Judging</strong> — 212, Classic Physique, Figure, Women's Physique, Ms. Olympia, Wellness</span></li>
-          <li><b>6:00 PM</b><span><strong>Friday Finals at Orleans Arena</strong> — six champions crowned, PLUS Mr. Olympia Pre-Judging. Lunsford and the contenders hit the stage for the first time</span></li>
+          <li><b>6:00 PM</b><span><strong>Friday Finals at <a href="https://www.orleansarena.com/" target="_blank" rel="noopener">Orleans Arena</a></strong> — six champions crowned, PLUS Mr. Olympia Pre-Judging. Lunsford and the contenders hit the stage for the first time</span></li>
         </ul>
       </div>
     </div>
@@ -372,8 +374,8 @@ footer a:hover{color:var(--gold)}
         <ul>
           <li><b>9:00 AM</b><span><strong>Expo Day Two</strong> — last chance on the floor with the biggest brands and athletes in fitness</span></li>
           <li><b>9:30 AM</b><span><strong>Pre-Judging</strong> — Men's Physique, Fitness, Bikini, plus Wheelchair &amp; Fit Model Olympia</span></li>
-          <li><b>7:00 PM</b><span><strong>Saturday Finals at Orleans Arena</strong> — Fitness, Men's Physique, Bikini… and then the moment the world is waiting for: <strong>the crowning of Mr. Olympia</strong></span></li>
-          <li><b>11:00 PM</b><span><strong>VIP After Party</strong> — Kaos Nightclub at the Palms. Celebrate with the champions</span></li>
+          <li><b>7:00 PM</b><span><strong>Saturday Finals at <a href="https://www.orleansarena.com/" target="_blank" rel="noopener">Orleans Arena</a></strong> — Fitness, Men's Physique, Bikini… and then the moment the world is waiting for: <strong>the crowning of Mr. Olympia</strong></span></li>
+          <li><b>11:00 PM</b><span><strong>VIP After Party</strong> — <a href="https://www.palms.com/" target="_blank" rel="noopener">Kaos Nightclub at the Palms</a>. Celebrate with the champions</span></li>
         </ul>
       </div>
     </div>
@@ -387,7 +389,7 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Learn From the Champions</h4>
         <ul>
-          <li><b>11:00 AM</b><span><strong>Olympia Champions Seminar</strong> — Palms Grand Ballroom. The newly crowned champs break down how they did it, hours after the confetti falls</span></li>
+          <li><b>11:00 AM</b><span><strong>Olympia Champions Seminar</strong> — <a href="https://www.palms.com/meetings-and-events" target="_blank" rel="noopener">Palms Grand Ballroom</a>. The newly crowned champs break down how they did it, hours after the confetti falls</span></li>
         </ul>
       </div>
     </div>
@@ -421,29 +423,6 @@ footer a:hover{color:var(--gold)}
         <h4>Elite Status</h4>
         <p>Limited Expo Elite passes unlock early entry and the ultimate expo experience. When they're gone, they're gone.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL -->
-<section class="social" id="social">
-  <div class="wrap">
-    <div class="sched-head">
-      <div class="eyebrow">@mrolympiallc</div>
-      <h2 class="section-title">The Hype Is <span class="gold-text">Real</span></h2>
-      <p style="color:var(--muted);margin-top:18px">The athletes are training. The callouts have started. Follow the road to Vegas as it happens.</p>
-    </div>
-    <div class="ig-grid">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dcb-nZAnWWF/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dcb-nZAnWWF/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbosDhiVZo/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbosDhiVZo/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcbOiGtB-dB/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcbOiGtB-dB/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbApMtgjxX/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbApMtgjxX/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dca1P27gIaB/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dca1P27gIaB/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcYV9UEAASg/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcYV9UEAASg/">View this post from @mrolympiallc</a></blockquote>
-    </div>
-    <div class="swipe-hint">Swipe &rarr;</div>
-    <div style="text-align:center;margin-top:40px">
-      <a class="btn btn-ghost" href="https://www.instagram.com/mrolympiallc/" target="_blank" rel="noopener">Follow @mrolympiallc</a>
     </div>
   </div>
 </section>
@@ -570,6 +549,29 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<!-- SOCIAL -->
+<section class="social" id="social">
+  <div class="wrap">
+    <div class="sched-head">
+      <div class="eyebrow">@mrolympiallc</div>
+      <h2 class="section-title">The Hype Is <span class="gold-text">Real</span></h2>
+      <p style="color:var(--muted);margin-top:18px">The athletes are training. The callouts have started. Follow the road to Vegas as it happens.</p>
+    </div>
+    <div class="ig-grid">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dcb-nZAnWWF/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dcb-nZAnWWF/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbosDhiVZo/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbosDhiVZo/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcbOiGtB-dB/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcbOiGtB-dB/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbApMtgjxX/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbApMtgjxX/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dca1P27gIaB/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dca1P27gIaB/">View this post from @mrolympiallc</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcYV9UEAASg/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcYV9UEAASg/">View this post from @mrolympiallc</a></blockquote>
+    </div>
+    <div class="swipe-hint">Swipe &rarr;</div>
+    <div style="text-align:center;margin-top:40px">
+      <a class="btn btn-ghost" href="https://www.instagram.com/mrolympiallc/" target="_blank" rel="noopener">Follow @mrolympiallc</a>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="eyebrow">September 24–27 • Las Vegas</div>
@@ -582,10 +584,10 @@ footer a:hover{color:var(--gold)}
   <div class="foot-inner">
     <a href="#" class="nav-logo"><img src="images/olympia-logo.png" alt="Joe Weider's Olympia 2026"></a>
     <div class="foot-links">
-      <a href="https://mrolympia.com/">MrOlympia.com</a>
-      <a href="https://mrolympia.com/ticket-type">Tickets</a>
-      <a href="https://mrolympia.com/travel-accommodations">Hotel &amp; Travel</a>
-      <a href="https://mrolympia.com/FAQ">FAQ</a>
+      <a href="https://mrolympia.com/" target="_blank" rel="noopener">MrOlympia.com</a>
+      <a href="https://mrolympia.com/ticket-type" target="_blank" rel="noopener">Tickets</a>
+      <a href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener">Hotel &amp; Travel</a>
+      <a href="https://mrolympia.com/FAQ" target="_blank" rel="noopener">FAQ</a>
     </div>
     <p>Joe Weider's Olympia Fitness &amp; Performance Weekend • Title Sponsor: Newtech Wellness</p>
   </div>
