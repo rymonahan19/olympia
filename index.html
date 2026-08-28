@@ -58,13 +58,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 
 /* ============ HERO ============ */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;background:
-  radial-gradient(1200px 600px at 50% -10%,rgba(210,45,49,.22),transparent 60%),
-  radial-gradient(900px 500px at 15% 110%,rgba(210,45,49,.12),transparent 60%),
-  radial-gradient(900px 500px at 85% 110%,rgba(210,45,49,.10),transparent 60%),
+  linear-gradient(180deg,rgba(7,7,7,.55) 0%,rgba(7,7,7,.72) 45%,rgba(7,7,7,.92) 100%),
+  url('images/hero-bg.jpg') center top/cover no-repeat,
   var(--black)}
-.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(115deg,transparent 0 120px,rgba(210,45,49,.03) 120px 121px);pointer-events:none}
+.hero>*{position:relative;z-index:1}
 .hero-date{font-family:var(--head);font-weight:600;letter-spacing:.4em;text-transform:uppercase;font-size:clamp(.75rem,2vw,1rem);color:var(--gold-hi);margin-bottom:18px}
-.hero-logo{width:min(560px,86vw);height:auto;margin-bottom:18px;filter:drop-shadow(0 10px 60px rgba(210,45,49,.45))}
+.hero-video{width:min(760px,92vw);aspect-ratio:16/9;margin-bottom:26px;border:1px solid rgba(210,45,49,.6);box-shadow:0 20px 80px rgba(0,0,0,.7),0 0 60px rgba(210,45,49,.35);background:#000}
+.hero-video iframe{width:100%;height:100%;border:0;display:block}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .hero-sub{font-family:var(--display);font-size:clamp(1.4rem,4vw,2.8rem);text-transform:uppercase;letter-spacing:.05em;margin-bottom:22px}
 .hero-tag{max-width:640px;color:var(--muted);font-size:clamp(.95rem,2vw,1.1rem);margin-bottom:36px}
@@ -109,11 +109,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .champ-tile{background:var(--near);padding:20px 16px;text-align:center}
 .champ-tile b{display:block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1rem}
 .champ-tile span{font-family:var(--head);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-
-/* ============ VIDEO ============ */
-.video-sec{padding:90px 0 100px;text-align:center;background:var(--black)}
-.video-frame{position:relative;max-width:960px;margin:44px auto 0;aspect-ratio:16/9;border:1px solid rgba(210,45,49,.4);box-shadow:0 0 80px rgba(210,45,49,.15)}
-.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* ============ SCHEDULE ============ */
 .schedule{padding:110px 0;background:linear-gradient(180deg,var(--near),var(--black))}
@@ -227,7 +222,9 @@ footer a:hover{color:var(--gold)}
 <!-- HERO -->
 <header class="hero">
   <div class="hero-date">September 24–27, 2026 &nbsp;•&nbsp; Las Vegas, NV</div>
-  <img class="hero-logo" src="images/olympia-logo.png" alt="" aria-hidden="true">
+  <div class="hero-video">
+    <iframe src="https://www.youtube.com/embed/njSC3gMfjjU?autoplay=1&mute=1&loop=1&playlist=njSC3gMfjjU&playsinline=1&rel=0" title="This Is The Olympia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="eager"></iframe>
+  </div>
   <h1 class="sr-only">Joe Weider's Olympia Fitness &amp; Performance Weekend 2026</h1>
   <div class="hero-sub gold-text">The Top of the Mountain</div>
   <p class="hero-tag">Joe Weider's Olympia Fitness &amp; Performance Weekend returns to Las Vegas. <strong>Four days. Eleven Olympia titles. One Sandow.</strong> The biggest weekend in bodybuilding history is coming — and you can be in the building when it happens.</p>
@@ -256,17 +253,6 @@ footer a:hover{color:var(--gold)}
     <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals — Orleans Arena</span><span>★ Saturday Night — Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
   </div>
 </div>
-
-<!-- VIDEO -->
-<section class="video-sec">
-  <div class="wrap">
-    <div class="eyebrow">Feel It</div>
-    <h2 class="section-title">This Is <span class="gold-text">Olympia</span></h2>
-    <div class="video-frame">
-      <iframe src="https://www.youtube.com/embed/njSC3gMfjjU" title="Olympia Hype Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
 
 <!-- MAIN EVENT -->
 <section class="main-event" id="main-event">
