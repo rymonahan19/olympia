@@ -67,8 +67,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .hero-date::before,.hero-date::after{content:"";height:2px;width:40px;background:linear-gradient(90deg,transparent,#e8393d);flex:none}
 .hero-date::after{background:linear-gradient(90deg,#e8393d,transparent)}
 .hero-date b{color:#f0494d;font-weight:600}
-.hero h1{font-family:var(--display);font-size:clamp(3rem,5.8vw,5.4rem);line-height:.94;text-transform:uppercase;color:#fff;margin-bottom:22px;text-shadow:0 4px 18px rgba(0,0,0,.9),0 12px 60px rgba(0,0,0,.7)}
-.hero h1 .accent{color:#f0494d;text-shadow:0 4px 18px rgba(0,0,0,.9),0 0 46px rgba(232,57,61,.55)}
+.hero h1{font-family:var(--display);text-transform:uppercase;color:#fff;margin-bottom:22px;text-shadow:0 4px 18px rgba(0,0,0,.9),0 12px 60px rgba(0,0,0,.7)}
+.hero h1 .h1-kicker{display:block;font-size:clamp(1.3rem,2.2vw,2rem);letter-spacing:.3em;line-height:1;margin-bottom:10px;padding-left:4px}
+.hero h1 .accent{display:block;font-size:clamp(4.4rem,9.5vw,8.2rem);line-height:.88;color:#f0494d;text-shadow:0 5px 22px rgba(0,0,0,.9),0 0 60px rgba(232,57,61,.55)}
 .hero-tag{color:#f4f2ee;font-size:clamp(1.02rem,1.4vw,1.18rem);line-height:1.7;max-width:540px;margin-bottom:34px;text-shadow:0 1px 14px rgba(0,0,0,.9)}
 .hero-tag strong{color:#fff}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
@@ -231,7 +232,7 @@ footer a:hover{color:var(--gold)}
   <div class="hero-inner">
     <div class="hero-copy">
       <div class="hero-date">September 24&ndash;27, 2026 <b>&bull;</b> Las Vegas</div>
-      <h1>The Top of the <span class="accent">Mountain</span></h1>
+      <h1><span class="h1-kicker">The Top of the</span> <span class="accent">Mountain</span></h1>
       <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas &mdash; be in the building when history happens.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
