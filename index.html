@@ -57,31 +57,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 @media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
 
 /* ============ HERO ============ */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;background:
-  linear-gradient(180deg,rgba(7,7,7,.55) 0%,rgba(7,7,7,.72) 45%,rgba(7,7,7,.92) 100%),
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:110px 24px 70px;background:
+  linear-gradient(180deg,rgba(7,7,7,.72) 0%,rgba(7,7,7,.85) 60%,#070707 100%),
   url('images/hero-bg.jpg') center top/cover no-repeat,
   var(--black)}
-.hero>*{position:relative;z-index:1}
-.hero-date{font-family:var(--head);font-weight:600;letter-spacing:.4em;text-transform:uppercase;font-size:clamp(.75rem,2vw,1rem);color:var(--gold-hi);margin-bottom:18px}
-.hero-video{width:min(760px,92vw);aspect-ratio:16/9;margin-bottom:26px;border:1px solid rgba(210,45,49,.6);box-shadow:0 20px 80px rgba(0,0,0,.7),0 0 60px rgba(210,45,49,.35);background:#000}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero-copy{text-align:left}
+.hero-date{font-family:var(--head);font-weight:600;letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;color:#f0494d;margin-bottom:20px;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+.hero h1{font-family:var(--display);font-size:clamp(2.7rem,5.4vw,4.8rem);line-height:.95;text-transform:uppercase;color:#fff;margin-bottom:20px;text-shadow:0 3px 34px rgba(0,0,0,.85)}
+.hero-tag{color:#eceae6;font-size:clamp(1rem,1.35vw,1.14rem);line-height:1.65;max-width:520px;margin-bottom:32px;text-shadow:0 1px 14px rgba(0,0,0,.85)}
+.hero-tag strong{color:#fff}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.hero-media{position:relative}
+.hero-video{aspect-ratio:16/9;border:1px solid rgba(210,45,49,.6);box-shadow:0 24px 90px rgba(0,0,0,.75),0 0 70px rgba(210,45,49,.3);background:#000}
 .hero-video iframe{width:100%;height:100%;border:0;display:block}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.hero-sub{font-family:var(--display);font-size:clamp(1.4rem,4vw,2.8rem);text-transform:uppercase;letter-spacing:.05em;margin-bottom:22px}
-.hero-tag{max-width:640px;color:var(--muted);font-size:clamp(.95rem,2vw,1.1rem);margin-bottom:36px}
-.hero-tag strong{color:var(--white)}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:56px}
-.stat-strip{display:flex;gap:0;justify-content:center;flex-wrap:wrap;border-top:1px solid rgba(210,45,49,.3);border-bottom:1px solid rgba(210,45,49,.3)}
-.stat{padding:18px 34px;text-align:center;border-right:1px solid rgba(210,45,49,.15)}
-.stat:last-child{border-right:none}
-.stat b{display:block;font-family:var(--display);font-size:2rem;color:var(--gold)}
-.stat span{font-family:var(--head);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
 
 /* ============ COUNTDOWN ============ */
-.countdown{display:flex;gap:14px;justify-content:center;margin:0 0 40px}
-.cd-cell{background:var(--panel);border:1px solid rgba(210,45,49,.35);min-width:92px;padding:16px 10px 12px}
-.cd-cell b{display:block;font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--gold-hi)}
-.cd-cell span{font-family:var(--head);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
-@media(max-width:520px){.cd-cell{min-width:72px;padding:12px 6px 10px}.cd-cell b{font-size:1.9rem}}
+.countdown{display:flex;gap:10px}
+.cd-cell{background:rgba(7,7,7,.7);backdrop-filter:blur(5px);border:1px solid rgba(210,45,49,.45);min-width:68px;padding:11px 8px 9px;text-align:center}
+.cd-cell b{display:block;font-family:var(--display);font-size:1.8rem;line-height:1;color:#f0494d}
+.cd-cell span{font-family:var(--head);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:#b3b3b3}
+@media(max-width:960px){
+  .hero{padding:96px 20px 60px}
+  .hero-inner{grid-template-columns:1fr;gap:34px}
+  .hero-media{order:-1}
+  .hero-copy{text-align:center}
+  .hero-tag{margin-left:auto;margin-right:auto}
+  .hero-ctas,.countdown{justify-content:center}
+}
 
 /* ============ MARQUEE ============ */
 .marquee{background:linear-gradient(90deg,#8f1a1d,#d22d31,#8f1a1d);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;border-top:1px solid rgba(0,0,0,.4);border-bottom:1px solid rgba(0,0,0,.4)}
@@ -221,28 +224,27 @@ footer a:hover{color:var(--gold)}
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-date">September 24–27, 2026 &nbsp;•&nbsp; Las Vegas, NV</div>
-  <div class="hero-video">
-    <iframe src="https://www.youtube.com/embed/njSC3gMfjjU?autoplay=1&mute=1&loop=1&playlist=njSC3gMfjjU&playsinline=1&rel=0" title="This Is The Olympia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="eager"></iframe>
-  </div>
-  <h1 class="sr-only">Joe Weider's Olympia Fitness &amp; Performance Weekend 2026</h1>
-  <div class="hero-sub gold-text">The Top of the Mountain</div>
-  <p class="hero-tag">Joe Weider's Olympia Fitness &amp; Performance Weekend returns to Las Vegas. <strong>Four days. Eleven Olympia titles. One Sandow.</strong> The biggest weekend in bodybuilding history is coming — and you can be in the building when it happens.</p>
-  <div class="countdown" id="countdown" aria-label="Countdown to Olympia weekend">
-    <div class="cd-cell"><b id="cd-d">–</b><span>Days</span></div>
-    <div class="cd-cell"><b id="cd-h">–</b><span>Hours</span></div>
-    <div class="cd-cell"><b id="cd-m">–</b><span>Mins</span></div>
-    <div class="cd-cell"><b id="cd-s">–</b><span>Secs</span></div>
-  </div>
-  <div class="hero-ctas">
-    <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
-    <a class="btn btn-ghost" href="#weekend">See the Weekend</a>
-  </div>
-  <div class="stat-strip">
-    <div class="stat"><b>4</b><span>Days</span></div>
-    <div class="stat"><b>11</b><span>Olympia Titles</span></div>
-    <div class="stat"><b>60+</b><span>Expo Brands</span></div>
-    <div class="stat"><b>1</b><span>Sandow</span></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-date">September 24&ndash;27, 2026 &nbsp;&bull;&nbsp; Las Vegas</div>
+      <h1>The Top of the <span class="gold-text">Mountain</span></h1>
+      <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas &mdash; be in the building when history happens.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
+        <a class="btn btn-ghost" href="#weekend">See the Weekend</a>
+      </div>
+      <div class="countdown" id="countdown" aria-label="Countdown to Olympia weekend">
+        <div class="cd-cell"><b id="cd-d">&ndash;</b><span>Days</span></div>
+        <div class="cd-cell"><b id="cd-h">&ndash;</b><span>Hours</span></div>
+        <div class="cd-cell"><b id="cd-m">&ndash;</b><span>Mins</span></div>
+        <div class="cd-cell"><b id="cd-s">&ndash;</b><span>Secs</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-video">
+        <iframe src="https://www.youtube.com/embed/njSC3gMfjjU?autoplay=1&mute=1&loop=1&playlist=njSC3gMfjjU&playsinline=1&rel=0" title="This Is The Olympia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="eager"></iframe>
+      </div>
+    </div>
   </div>
 </header>
 
