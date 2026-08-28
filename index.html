@@ -36,14 +36,14 @@ body{background:var(--black);color:var(--white);font-family:var(--body);line-hei
 img{max-width:100%}
 a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.gold-text{background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 45%,var(--gold-lo) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gold-text{background:linear-gradient(180deg,#ff5e62 0%,#e8393d 55%,#c1272b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.35em;text-transform:uppercase;font-size:.8rem;color:var(--gold)}
 .section-title{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
-.btn{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;text-align:center;padding:18px 44px;font-size:1.05rem;transition:transform .15s ease,box-shadow .15s ease}
+.btn{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;text-align:center;padding:19px 46px;font-size:1.05rem;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease,background .15s ease}
 .btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:#ffffff;box-shadow:0 0 0 1px rgba(240,73,77,.5),0 8px 30px rgba(210,45,49,.35)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(240,73,77,.7),0 14px 40px rgba(210,45,49,.5)}
-.btn-ghost{border:2px solid var(--gold);color:var(--gold)}
-.btn-ghost:hover{background:rgba(210,45,49,.1);transform:translateY(-2px)}
+.btn-ghost{border:2px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{border-color:#e8393d;background:rgba(210,45,49,.12);transform:translateY(-2px)}
 
 /* ============ NAV ============ */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(210,45,49,.25)}
@@ -63,9 +63,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
   var(--black)}
 .hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
 .hero-copy{text-align:left}
-.hero-date{font-family:var(--head);font-weight:600;letter-spacing:.34em;text-transform:uppercase;font-size:.78rem;color:#f0494d;margin-bottom:20px;text-shadow:0 1px 10px rgba(0,0,0,.9)}
-.hero h1{font-family:var(--display);font-size:clamp(2.7rem,5.4vw,4.8rem);line-height:.95;text-transform:uppercase;color:#fff;margin-bottom:20px;text-shadow:0 3px 34px rgba(0,0,0,.85)}
-.hero-tag{color:#eceae6;font-size:clamp(1rem,1.35vw,1.14rem);line-height:1.65;max-width:520px;margin-bottom:32px;text-shadow:0 1px 14px rgba(0,0,0,.85)}
+.hero-date{display:inline-flex;align-items:center;gap:16px;font-family:var(--head);font-weight:600;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(.95rem,1.3vw,1.1rem);color:#fff;margin-bottom:24px;text-shadow:0 1px 12px rgba(0,0,0,.9)}
+.hero-date::before,.hero-date::after{content:"";height:2px;width:40px;background:linear-gradient(90deg,transparent,#e8393d);flex:none}
+.hero-date::after{background:linear-gradient(90deg,#e8393d,transparent)}
+.hero-date b{color:#f0494d;font-weight:600}
+.hero h1{font-family:var(--display);font-size:clamp(3rem,5.8vw,5.4rem);line-height:.94;text-transform:uppercase;color:#fff;margin-bottom:22px;text-shadow:0 4px 18px rgba(0,0,0,.9),0 12px 60px rgba(0,0,0,.7)}
+.hero h1 .accent{color:#f0494d;text-shadow:0 4px 18px rgba(0,0,0,.9),0 0 46px rgba(232,57,61,.55)}
+.hero-tag{color:#f4f2ee;font-size:clamp(1.02rem,1.4vw,1.18rem);line-height:1.7;max-width:540px;margin-bottom:34px;text-shadow:0 1px 14px rgba(0,0,0,.9)}
 .hero-tag strong{color:#fff}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
 .hero-media{position:relative}
@@ -74,9 +78,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 
 /* ============ COUNTDOWN ============ */
 .countdown{display:flex;gap:10px}
-.cd-cell{background:rgba(7,7,7,.7);backdrop-filter:blur(5px);border:1px solid rgba(210,45,49,.45);min-width:68px;padding:11px 8px 9px;text-align:center}
-.cd-cell b{display:block;font-family:var(--display);font-size:1.8rem;line-height:1;color:#f0494d}
-.cd-cell span{font-family:var(--head);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:#b3b3b3}
+.cd-cell{background:rgba(7,7,7,.62);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.16);border-bottom:2px solid #e8393d;min-width:74px;padding:13px 10px 11px;text-align:center}
+.cd-cell b{display:block;font-family:var(--display);font-size:2rem;line-height:1;color:#fff}
+.cd-cell span{font-family:var(--head);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#f0494d;margin-top:3px;display:block}
 @media(max-width:960px){
   .hero{padding:96px 20px 60px}
   .hero-inner{grid-template-columns:1fr;gap:34px}
@@ -226,8 +230,8 @@ footer a:hover{color:var(--gold)}
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <div class="hero-date">September 24&ndash;27, 2026 &nbsp;&bull;&nbsp; Las Vegas</div>
-      <h1>The Top of the <span class="gold-text">Mountain</span></h1>
+      <div class="hero-date">September 24&ndash;27, 2026 <b>&bull;</b> Las Vegas</div>
+      <h1>The Top of the <span class="accent">Mountain</span></h1>
       <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas &mdash; be in the building when history happens.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
