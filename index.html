@@ -113,12 +113,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .champ-meta div{display:flex;justify-content:space-between;font-family:var(--head);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase}
 .champ-meta span{color:var(--muted)}
 .champ-meta b{color:var(--gold-hi)}
-.champs-row{margin-top:70px}
-.champs-row h3{font-family:var(--head);font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:.85rem;color:var(--muted);text-align:center;margin-bottom:28px}
-.champs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(210,45,49,.2);border:1px solid rgba(210,45,49,.2)}
-.champ-tile{background:var(--near);padding:20px 16px;text-align:center}
-.champ-tile b{display:block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:1rem}
-.champ-tile span{font-family:var(--head);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.champs-row{margin-top:90px}
+.champs-head{text-align:center;margin-bottom:44px}
+.champs-head .champs-title{font-size:clamp(2rem,4.4vw,3.4rem);margin-top:6px}
+.champs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.champ-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;background:linear-gradient(165deg,#1c1717,#100d0d);border:1px solid rgba(210,45,49,.32);padding:26px 24px 20px;text-decoration:none;overflow:hidden;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.champ-tile::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 220px at 100% 0%,rgba(210,45,49,.2),transparent 62%);pointer-events:none}
+.champ-tile:hover{transform:translateY(-5px);border-color:#e8393d;box-shadow:0 20px 55px rgba(210,45,49,.28)}
+.ct-division{position:relative;font-family:var(--head);font-weight:600;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;background:linear-gradient(180deg,#e8393d,#a81f23);padding:6px 12px;margin-bottom:18px}
+.ct-name{position:relative;font-family:var(--display);font-size:clamp(1.5rem,1.9vw,1.95rem);line-height:1.02;text-transform:uppercase;color:var(--white);margin-bottom:12px;min-height:2.05em}
+.ct-meta{position:relative;font-family:var(--head);font-weight:600;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#f0494d;margin-bottom:20px}
+.ct-ig{position:relative;margin-top:auto;width:100%;display:flex;align-items:center;gap:9px;font-family:var(--head);font-size:.88rem;letter-spacing:.06em;color:var(--muted);border-top:1px solid rgba(255,255,255,.12);padding-top:14px;transition:color .15s}
+.ct-ig svg{width:16px;height:16px;flex:none}
+.ct-ig .ct-arrow{margin-left:auto;transition:transform .18s}
+.champ-tile:hover .ct-ig{color:#fff}
+.champ-tile:hover .ct-arrow{transform:translate(3px,-3px)}
+@media(max-width:1000px){.champs-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.champs-grid{grid-template-columns:1fr}.ct-name{min-height:0}}
 
 /* ============ SCHEDULE ============ */
 .schedule{padding:110px 0;background:linear-gradient(180deg,#1c1a1a,#121111)}
@@ -307,16 +318,59 @@ footer a:hover{color:var(--gold)}
       </div>
     </div>
     <div class="champs-row">
-      <h3>Every Crown Gets Defended</h3>
+      <div class="champs-head">
+        <div class="eyebrow">Every Crown Gets Defended</div>
+        <h3 class="section-title champs-title">The Reigning <span class="gold-text">Champions</span></h3>
+      </div>
       <div class="champs-grid">
-        <div class="champ-tile"><span>Classic Physique</span><b>Ramon Dino</b></div>
-        <div class="champ-tile"><span>Men's Physique</span><b>Ryan Terry</b></div>
-        <div class="champ-tile"><span>Ms. Olympia</span><b>Andrea Shaw</b></div>
-        <div class="champ-tile"><span>Bikini</span><b>Maureen Blanquisco</b></div>
-        <div class="champ-tile"><span>Wellness</span><b>Eduarda Bezerra</b></div>
-        <div class="champ-tile"><span>Figure</span><b>Rhea Gayle</b></div>
-        <div class="champ-tile"><span>Women's Physique</span><b>Natalia Coelho</b></div>
-        <div class="champ-tile"><span>Fitness</span><b>Michelle Fredua-Mensah</b></div>
+        <a class="champ-tile" href="https://www.instagram.com/ramondinopro/" target="_blank" rel="noopener">
+          <span class="ct-division">Classic Physique</span>
+          <span class="ct-name">Ramon Dino</span>
+          <span class="ct-meta">2025 Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @ramondinopro<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/ryanjterry/" target="_blank" rel="noopener">
+          <span class="ct-division">Men's Physique</span>
+          <span class="ct-name">Ryan Terry</span>
+          <span class="ct-meta">2× Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @ryanjterry<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/mzprettymuscle/" target="_blank" rel="noopener">
+          <span class="ct-division">Ms. Olympia</span>
+          <span class="ct-name">Andrea Shaw</span>
+          <span class="ct-meta">6× Ms. Olympia</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @mzprettymuscle<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/maureenblanquisco.pro/" target="_blank" rel="noopener">
+          <span class="ct-division">Bikini</span>
+          <span class="ct-name">Maureen Blanquisco</span>
+          <span class="ct-meta">2025 Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @maureenblanquisco.pro<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/eduardabeezerra/" target="_blank" rel="noopener">
+          <span class="ct-division">Wellness</span>
+          <span class="ct-name">Eduarda Bezerra</span>
+          <span class="ct-meta">2025 Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @eduardabeezerra<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/rheaagayle/" target="_blank" rel="noopener">
+          <span class="ct-division">Figure</span>
+          <span class="ct-name">Rhea Gayle</span>
+          <span class="ct-meta">2025 Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @rheaagayle<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/ifbbpronataliacoelho/" target="_blank" rel="noopener">
+          <span class="ct-division">Women's Physique</span>
+          <span class="ct-name">Natalia Coelho</span>
+          <span class="ct-meta">2× Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @ifbbpronataliacoelho<span class="ct-arrow">&#8599;</span></span>
+        </a>
+        <a class="champ-tile" href="https://www.instagram.com/shellyfit_model/" target="_blank" rel="noopener">
+          <span class="ct-division">Fitness</span>
+          <span class="ct-name">Michelle Fredua-Mensah</span>
+          <span class="ct-meta">2025 Champion</span>
+          <span class="ct-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg> @shellyfit_model<span class="ct-arrow">&#8599;</span></span>
+        </a>
       </div>
     </div>
   </div>
