@@ -55,7 +55,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .nav-links a{font-family:var(--head);font-weight:500;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .15s}
 .nav-links a:hover{color:var(--gold-hi)}
 .nav-cta{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:#ffffff!important;padding:10px 22px;font-weight:700!important}
-@media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
+@media(max-width:820px){.nav-links{display:none}}
 
 /* ============ HERO ============ */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 24px 80px;background:
@@ -160,7 +160,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .expo-card p{color:var(--muted);font-size:.92rem}
 
 /* ============ SOCIAL ============ */
-.social{padding:110px 0;background:#ecebe8}
 .ig-grid{display:flex;gap:20px;overflow-x:auto;align-items:start;margin:20px calc(50% - 50vw) 0;padding:0 24px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .ig-grid::-webkit-scrollbar{display:none}
 .ig-grid .instagram-media{flex:0 0 340px}
@@ -197,7 +196,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .sponsor-cell{background:#fff;display:flex;align-items:center;justify-content:center;padding:26px 18px;min-height:112px}
 .sponsor-cell img{max-height:54px;max-width:78%;object-fit:contain}
 @media(max-width:900px){.sponsor-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:520px){.sponsor-grid{grid-template-columns:repeat(2,1fr)}.title-sponsors{gap:36px}.title-sponsors img{height:48px}}
+@media(max-width:520px){.sponsor-grid{grid-template-columns:repeat(2,1fr)}.title-sponsors{gap:22px;flex-wrap:nowrap;justify-content:center}.title-sponsors img{height:38px;max-width:44vw;object-fit:contain}}
 
 /* ============ TICKETS ============ */
 .tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
@@ -273,6 +272,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .faq-a{padding:0 24px 22px;color:var(--muted);font-size:.95rem;line-height:1.7}
 .faq-a a{color:var(--gold-hi)}
 
+/* ============ MOBILE MENU ============ */
+.nav-burger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;flex-direction:column;gap:5px;align-items:center;justify-content:center;padding:0}
+.nav-burger span{display:block;width:22px;height:2px;background:#fff}
+@media(max-width:820px){.nav-burger{display:flex}}
+.mobile-menu{position:fixed;inset:0;z-index:200;background:#070707;transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;padding:14px 24px calc(24px + env(safe-area-inset-bottom));visibility:hidden}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mm-head{display:flex;justify-content:space-between;align-items:center;height:52px;margin-bottom:26px}
+.mm-head img{height:46px;width:auto}
+.mm-close{background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative}
+.mm-close::before,.mm-close::after{content:"";position:absolute;left:50%;top:50%;width:26px;height:2px;background:#fff}
+.mm-close::before{transform:translate(-50%,-50%) rotate(45deg)}
+.mm-close::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.mm-links{display:flex;flex-direction:column;flex:1;overflow-y:auto}
+.mm-links a{font-family:var(--head);font-weight:600;font-size:1.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--white);text-decoration:none;padding:14px 2px;border-bottom:1px solid rgba(255,255,255,.09);display:flex;justify-content:space-between;align-items:center}
+.mm-links a::after{content:"\203A";color:#f0494d;font-size:1.6rem;line-height:1}
+.mm-links a:active{color:#f0494d}
+.mm-cta{margin-top:22px}
+body.menu-open{overflow:hidden}
+
 /* ============ STICKY MOBILE CTA ============ */
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:#070707;border-top:1px solid rgba(210,45,49,.35);transform:translateY(110%);transition:transform .25s ease}
 .sticky-cta.show{transform:translateY(0)}
@@ -290,12 +308,12 @@ footer a:hover{color:var(--gold)}
 
 /* ============ MOBILE SPACING ============ */
 @media(max-width:680px){
-  .main-event,.schedule,.expo,.sponsors,.tickets,.venues,.hotel,.social,.faq{padding:64px 0}
+  .main-event,.schedule,.expo,.sponsors,.tickets,.venues,.hotel,.faq{padding:64px 0}
   .final-cta{padding:88px 20px}
   .eyebrow{font-size:.9rem;letter-spacing:.2em;line-height:1.5;margin-bottom:10px}
-  .hero-date{letter-spacing:.18em;gap:10px}
-  .hero-date::before,.hero-date::after{width:22px}
-  .section-title{line-height:1.15}
+  .hero-date{flex-direction:column;gap:5px;letter-spacing:.2em}
+  .hero-date::before,.hero-date::after,.hero-date b{display:none}
+  .section-title{line-height:1.28}
   .final-cta h2{line-height:1.08;margin-bottom:18px}
   .final-cta p{margin-bottom:32px}
   .sched-head{margin-bottom:38px}
@@ -313,7 +331,8 @@ footer a:hover{color:var(--gold)}
   .venue-card{padding:26px 22px}
   .tix-body{padding:20px 18px 22px}
   .section-banner{margin:32px 0 28px}
-  .shuttle{margin-top:26px;padding:16px;font-size:.95rem;letter-spacing:.08em}
+  .shuttle{margin-top:26px;padding:16px 12px;font-size:.88rem;letter-spacing:.06em;line-height:1.7}
+  .shuttle .s2{display:block}
   .hotel-ctas{margin-top:28px;flex-direction:column;align-items:stretch}
   .hotel-warn{margin-top:24px}
   .faq-list{margin-top:32px}
@@ -351,11 +370,28 @@ footer a:hover{color:var(--gold)}
       <a href="#weekend">Schedule</a>
       <a href="#expo">Expo</a>
       <a href="#venues">Venues</a>
-      <a href="#social">Social</a>
       <a href="#tickets" class="nav-cta">Get Tickets</a>
     </div>
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mm-head">
+    <img src="images/olympia-logo.png" alt="Olympia 2026">
+    <button class="mm-close" id="mm-close" aria-label="Close menu"></button>
+  </div>
+  <div class="mm-links" role="navigation">
+    <a href="#main-event">Main Event</a>
+    <a href="#weekend">Schedule</a>
+    <a href="#expo">Expo</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#venues">Venues</a>
+    <a href="#hotel">Hotel &amp; Travel</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a class="btn btn-gold mm-cta" href="#tickets">Get Tickets</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -732,7 +768,7 @@ footer a:hover{color:var(--gold)}
         <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Palms+Casino+Resort%2C+4321+W+Flamingo+Rd%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
     </div>
-    <div class="shuttle">Free shuttles run between all venues every 20 minutes, Friday &amp; Saturday</div>
+    <div class="shuttle">Free shuttles run between all venues <span class="s2">every 20 minutes, Friday &amp; Saturday</span></div>
     <a class="section-banner" href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener"><img src="images/palms-banner.jpg" alt="The Palms Casino Resort, official host hotel of the 2026 Olympia"></a>
   </div>
 </section>
@@ -750,28 +786,6 @@ footer a:hover{color:var(--gold)}
       <a class="btn btn-ghost" href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener">Hotel &amp; Travel Info</a>
     </div>
     <p class="hotel-warn">Book only through the official link. No company will contact you as the "Official Housing Company" of the Olympia; unauthorized bookings can carry higher rates and harsh cancellation penalties.</p>
-  </div>
-</section>
-
-<!-- SOCIAL -->
-<section class="social section--light" id="social">
-  <div class="wrap">
-    <div class="sched-head">
-      <div class="eyebrow">@mrolympiallc</div>
-      <h2 class="section-title">The Hype Is <span class="gold-text">Real</span></h2>
-    </div>
-    <div class="ig-grid">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dcb-nZAnWWF/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dcb-nZAnWWF/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbosDhiVZo/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbosDhiVZo/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcbOiGtB-dB/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcbOiGtB-dB/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcbApMtgjxX/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DcbApMtgjxX/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dca1P27gIaB/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dca1P27gIaB/">View this post from @mrolympiallc</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcYV9UEAASg/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcYV9UEAASg/">View this post from @mrolympiallc</a></blockquote>
-    </div>
-    <div class="swipe-hint">Swipe &rarr;</div>
-    <div style="text-align:center;margin-top:40px">
-      <a class="btn btn-ghost" href="https://www.instagram.com/mrolympiallc/" target="_blank" rel="noopener">Follow @mrolympiallc</a>
-    </div>
   </div>
 </section>
 
@@ -857,6 +871,22 @@ footer a:hover{color:var(--gold)}
   <a class="btn btn-ghost" href="#weekend">See Schedule</a>
   <a class="btn btn-gold" href="#tickets">Get Tickets</a>
 </div>
+<script>
+(function(){
+  var menu = document.getElementById('mobile-menu');
+  var burger = document.getElementById('nav-burger');
+  var closeBtn = document.getElementById('mm-close');
+  function setMenu(open){
+    menu.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  burger.addEventListener('click', function(){ setMenu(true); });
+  closeBtn.addEventListener('click', function(){ setMenu(false); });
+  [].slice.call(menu.querySelectorAll('a')).forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+})();
+</script>
 <script>
 (function(){
   var bar = document.getElementById('sticky-cta');
