@@ -37,7 +37,7 @@ img{max-width:100%}
 a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .gold-text{background:linear-gradient(180deg,#ff5e62 0%,#e8393d 55%,#c1272b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.35em;text-transform:uppercase;font-size:clamp(1rem,1.5vw,1.2rem);color:var(--gold);margin-bottom:6px}
+.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.35em;text-transform:uppercase;font-size:clamp(1.3rem,2vw,1.65rem);color:var(--gold);margin-bottom:8px}
 .section-title{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
 .btn{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;text-align:center;padding:19px 46px;font-size:1.05rem;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease,background .15s ease}
 .btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:#ffffff;box-shadow:0 0 0 1px rgba(240,73,77,.5),0 8px 30px rgba(210,45,49,.35)}
@@ -216,6 +216,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .venue-card h4{font-family:var(--display);font-size:1.8rem;text-transform:uppercase;margin:8px 0 6px}
 .venue-card address{font-style:normal;color:var(--muted);font-size:.92rem;margin-bottom:12px}
 .venue-card p{color:var(--muted);font-size:.92rem}
+.map-pill{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:9px 20px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-family:var(--head);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-decoration:none;transition:border-color .15s,background .15s,color .15s}
+.map-pill svg{width:15px;height:15px;flex:none;color:#f0494d}
+.map-pill:hover{border-color:#e8393d;background:rgba(210,45,49,.14)}
 .shuttle{margin-top:34px;text-align:center;font-family:var(--head);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;color:#fff;border:1px dashed rgba(210,45,49,.4);padding:18px}
 
 /* ============ FINAL CTA ============ */
@@ -584,18 +587,21 @@ footer a:hover{color:var(--gold)}
         <h4>Orleans Arena</h4>
         <address>4500 W Tropicana Ave, Las Vegas</address>
         <p>Friday &amp; Saturday night Finals. This is where the Sandow changes hands — or doesn't.</p>
+        <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Orleans+Arena%2C+4500+W+Tropicana+Ave%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
       <div class="venue-card">
         <div class="vlabel">The Expo</div>
         <h4>LV Convention Center</h4>
         <address>3150 Paradise Rd — South Hall</address>
         <p>The Olympia World Fitness Expo, Friday and Saturday. The floor where the whole industry shows up.</p>
+        <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Las+Vegas+Convention+Center+South+Hall%2C+3150+Paradise+Rd%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
       <div class="venue-card">
         <div class="vlabel">Host Hotel</div>
         <h4>The Palms</h4>
         <address>4321 W Flamingo Rd, Las Vegas</address>
         <p>Press conference, kickoff party, pop-up gym, seminars and the after party. Stay where it all happens.</p>
+        <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Palms+Casino+Resort%2C+4321+W+Flamingo+Rd%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
     </div>
     <a class="section-banner" href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener"><img src="images/palms-banner.jpg" alt="The Palms Casino Resort — official host hotel of the 2026 Olympia"></a>
