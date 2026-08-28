@@ -103,7 +103,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 @media(max-width:880px){.me-grid{grid-template-columns:1fr}}
 .me-copy p{color:var(--muted);margin:22px 0;font-size:1.05rem}
 .me-copy p strong{color:var(--white)}
-.champ-card{background:var(--panel);border:1px solid rgba(210,45,49,.4);padding:44px 40px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.champ-card{background:var(--panel);border:1px solid rgba(210,45,49,.4);padding:0 0 40px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden}
+.champ-photo{width:100%;height:240px;object-fit:cover;object-position:70% 20%;display:block;margin-bottom:30px}
+.champ-card .champ-label,.champ-card .champ-name,.champ-card .champ-meta{margin-left:40px;margin-right:40px}
 .champ-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold-lo),var(--gold-hi),var(--gold-lo))}
 .champ-label{font-family:var(--head);font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
 .champ-name{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.4rem);line-height:.95;text-transform:uppercase}
@@ -119,7 +121,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .champ-tile span{font-family:var(--head);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 
 /* ============ SCHEDULE ============ */
-.schedule{padding:110px 0;background:linear-gradient(180deg,var(--near),var(--black))}
+.schedule{padding:110px 0;background:linear-gradient(180deg,#1c1a1a,#121111)}
 .sched-head{text-align:center;max-width:760px;margin:0 auto 60px}
 .sched-head p{color:var(--muted);margin-top:18px}
 .day-card{display:grid;grid-template-columns:220px 1fr;gap:0;background:var(--panel);border:1px solid rgba(210,45,49,.25);margin-bottom:22px;overflow:hidden}
@@ -139,7 +141,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .main-night .day-side{background:linear-gradient(160deg,rgba(210,45,49,.35),rgba(210,45,49,.08))}
 
 /* ============ EXPO ============ */
-.expo{padding:110px 0;background:radial-gradient(1000px 500px at 50% 0%,rgba(210,45,49,.10),transparent 60%),var(--near)}
+.expo{padding:110px 0;background:#f5f4f1}
 .expo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
 @media(max-width:1000px){.expo-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.expo-grid{grid-template-columns:1fr}}
@@ -156,6 +158,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .ig-grid .instagram-media{width:100%!important;min-width:0!important;max-width:100%!important;margin:0!important;border:1px solid rgba(210,45,49,.35)!important;border-radius:4px;background:var(--panel)}
 .ig-grid blockquote a{color:var(--muted);display:block;padding:20px;font-size:.9rem}
 .swipe-hint{display:none;text-align:center;font-family:var(--head);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+
+/* ============ LIGHT SECTIONS / BANNERS / SPONSORS ============ */
+.section--light .section-title{color:#161514}
+.section--light .sched-head p{color:#5c5a56}
+.section--light .expo-card{background:#fff;border:1px solid #e6e3de;box-shadow:0 12px 34px rgba(20,15,10,.07)}
+.section--light .expo-card h4{color:#1a1918}
+.section--light .expo-card p{color:#5c5a56}
+.section-banner{display:block;margin:44px 0 40px;border:1px solid rgba(210,45,49,.4);box-shadow:0 18px 50px rgba(0,0,0,.25);transition:transform .18s ease}
+.section-banner:hover{transform:translateY(-3px)}
+.section-banner img{width:100%;display:block}
+.sponsors{padding:110px 0;background:#fff}
+.title-sponsors{display:flex;gap:64px;justify-content:center;align-items:center;flex-wrap:wrap;margin:10px 0 48px}
+.title-sponsors img{height:64px;width:auto;object-fit:contain}
+.sponsor-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:#e9e6e1;border:1px solid #e9e6e1}
+.sponsor-cell{background:#fff;display:flex;align-items:center;justify-content:center;padding:26px 18px;min-height:112px}
+.sponsor-cell img{max-height:54px;max-width:78%;object-fit:contain}
+@media(max-width:900px){.sponsor-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.sponsor-grid{grid-template-columns:repeat(2,1fr)}.title-sponsors{gap:36px}.title-sponsors img{height:48px}}
 
 /* ============ TICKETS ============ */
 .tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
@@ -176,7 +196,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .tix-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:30px}
 
 /* ============ VENUES ============ */
-.venues{padding:110px 0;background:var(--near)}
+.venues{padding:110px 0;background:linear-gradient(180deg,#1c1a1a,#131212)}
 .venue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:52px}
 .venue-card{border:1px solid rgba(210,45,49,.25);background:var(--panel);padding:34px 30px}
 .venue-card .vlabel{font-family:var(--head);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:600}
@@ -186,8 +206,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .shuttle{margin-top:34px;text-align:center;font-family:var(--head);letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;color:var(--gold);border:1px dashed rgba(210,45,49,.4);padding:18px}
 
 /* ============ FINAL CTA ============ */
-.final-cta{padding:130px 24px;text-align:center;background:
-  radial-gradient(900px 500px at 50% 100%,rgba(210,45,49,.25),transparent 65%),var(--black)}
+.final-cta{padding:150px 24px;text-align:center;background:
+  linear-gradient(180deg,rgba(7,7,7,.78),rgba(7,7,7,.88)),url('images/cta-mountain.jpg') center/cover no-repeat,var(--black)}
 .final-cta h2{font-family:var(--display);font-size:clamp(2.8rem,8vw,6rem);line-height:.92;text-transform:uppercase;margin-bottom:20px}
 .final-cta p{color:var(--muted);max-width:560px;margin:0 auto 40px}
 
@@ -273,6 +293,7 @@ footer a:hover{color:var(--gold)}
         <a class="btn btn-gold" href="#tickets">Be There When It Happens</a>
       </div>
       <div class="champ-card">
+        <img class="champ-photo" src="images/champ-sandow.jpg" alt="Derek Lunsford celebrates with the Sandow trophy">
         <div class="champ-label">Reigning • Defending</div>
         <div class="champ-name gold-text">Derek<br>Lunsford</div>
         <div class="champ-meta">
@@ -374,10 +395,11 @@ footer a:hover{color:var(--gold)}
 </section>
 
 <!-- EXPO -->
-<section class="expo" id="expo">
+<section class="expo section--light" id="expo">
   <div class="wrap">
     <div class="eyebrow">Friday &amp; Saturday • LV Convention Center</div>
     <h2 class="section-title">Olympia World <span class="gold-text">Fitness Expo</span></h2>
+    <a class="section-banner" href="https://www.gofevo.com/event/2026OlympiaWorldExpo" target="_blank" rel="noopener"><img src="images/expo-banner.jpg" alt="Experience the Olympia World Fitness Expo — where the fitness industry comes together"></a>
     <div class="expo-grid">
       <div class="expo-card">
         <div class="num">60+</div>
@@ -426,6 +448,41 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<!-- SPONSORS -->
+<section class="sponsors section--light" id="sponsors">
+  <div class="wrap">
+    <div class="sched-head">
+      <div class="eyebrow">Powered By The Industry</div>
+      <h2 class="section-title">The Biggest <span class="gold-text">Brands</span></h2>
+      <p>Title sponsor Newtech leads 60+ of the biggest names in fitness onto the expo floor.</p>
+    </div>
+    <div class="title-sponsors">
+      <img src="images/sponsor-newtech.png" alt="Newtech Strength Equipment — Title Sponsor">
+      <img src="images/sponsor-integralmedica.png" alt="Integralmedica">
+    </div>
+    <div class="sponsor-grid">
+      <div class="sponsor-cell"><img src="images/sponsor-gnc.jpg" alt="GNC" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-on.png" alt="ON" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-gymshark.png" alt="GYMSHARK" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-myprotein.png" alt="MYPROTEIN" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-mutant.png" alt="MUTANT" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-celsius.png" alt="CELSIUS" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-bsn.png" alt="BSN" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-raw.png" alt="RAW" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-beast.png" alt="BEAST" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-steelfit.png" alt="STEELFIT" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-protan.jpg" alt="PROTAN" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-titan.png" alt="TITAN" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-evogen.jpg" alt="EVOGEN" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-bum.png" alt="BUM" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-nebbia.jpg" alt="NEBBIA" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-npc.jpg" alt="NPC" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-ifbb.jpg" alt="IFBB" loading="lazy"></div>
+      <div class="sponsor-cell"><img src="images/sponsor-wings.png" alt="WINGS" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
 <!-- TICKETS -->
 <section class="tickets" id="tickets">
   <div class="wrap">
@@ -434,6 +491,7 @@ footer a:hover{color:var(--gold)}
       <h2 class="section-title">Claim Your <span class="gold-text">Seat</span></h2>
       <p style="color:var(--muted);margin-top:18px">VIP packages are already <strong style="color:var(--white)">SOLD OUT</strong>. Finals seats and Expo passes are moving. Lock yours before Vegas sells out.</p>
     </div>
+    <a class="section-banner" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener"><img src="images/arena-tickets.jpg" alt="Arena tickets now on sale — Orleans Arena, Las Vegas"></a>
     <div class="tix-grid">
       <div class="tix-card featured">
         <div class="tix-flag">Most Wanted</div>
@@ -444,7 +502,7 @@ footer a:hover{color:var(--gold)}
           <li><strong>Saturday Night:</strong> Finals of Fitness, Men's Physique, Bikini — and the crowning of <strong>Mr. Olympia</strong></li>
           <li>Be in the arena for the biggest moment in bodybuilding</li>
         </ul>
-        <a class="btn btn-gold" href="https://mrolympia.com/ticket-type">Buy Finals Tickets</a>
+        <a class="btn btn-gold" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener">Buy Finals Tickets</a>
       </div>
       <div class="tix-card">
         <h3>Expo Passes</h3>
@@ -454,7 +512,7 @@ footer a:hover{color:var(--gold)}
           <li>60+ brands, athlete meet &amp; greets, exclusive expo-only deals</li>
           <li><strong>Expo Elite Status</strong> — early entry, ultimate access, limited quantity</li>
         </ul>
-        <a class="btn btn-ghost" href="https://mrolympia.com/ticket-type">Buy Expo Passes</a>
+        <a class="btn btn-ghost" href="https://www.gofevo.com/event/2026OlympiaWorldExpo" target="_blank" rel="noopener">Buy Expo Passes</a>
       </div>
       <div class="tix-card">
         <h3>Amateur Olympia</h3>
@@ -463,7 +521,7 @@ footer a:hover{color:var(--gold)}
           <li>See tomorrow's Olympians earn their shot on the amateur stage</li>
           <li>The proving ground of the sport — where careers are born</li>
         </ul>
-        <a class="btn btn-ghost" href="https://mrolympia.com/ticket-type">Buy Amateur Tickets</a>
+        <a class="btn btn-ghost" href="https://www.axs.com/series/33701/2026-amateur-olympia-tickets?skin=palmscasinoresort" target="_blank" rel="noopener">Buy Amateur Tickets</a>
       </div>
       <div class="tix-card soldout">
         <div class="tix-flag red">Sold Out</div>
@@ -507,6 +565,7 @@ footer a:hover{color:var(--gold)}
         <p>Press conference, kickoff party, pop-up gym, seminars and the after party. Stay where it all happens.</p>
       </div>
     </div>
+    <a class="section-banner" href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener"><img src="images/palms-banner.jpg" alt="The Palms Casino Resort — official host hotel of the 2026 Olympia"></a>
     <div class="shuttle">Free shuttles run between all venues every 20 minutes, Friday &amp; Saturday</div>
   </div>
 </section>
@@ -516,7 +575,7 @@ footer a:hover{color:var(--gold)}
   <div class="eyebrow">September 24–27 • Las Vegas</div>
   <h2>Don't Watch History.<br><span class="gold-text">Witness It.</span></h2>
   <p>One weekend a year, the strongest stage on the planet decides who stands at the top of the mountain. Be in the building.</p>
-  <a class="btn btn-gold" href="https://mrolympia.com/ticket-type">Get Your Tickets Now</a>
+  <a class="btn btn-gold" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener">Get Your Tickets Now</a>
 </section>
 
 <footer>
