@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5ZM9KGJN');</script>
 <!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olympia 2026 — September 24–27 — Las Vegas | Get Tickets</title>
+<title>Olympia 2026 Tickets | September 24–27 | Las Vegas</title>
 <meta name="description" content="Joe Weider's Olympia Fitness & Performance Weekend. Sept 24–27, 2026, Las Vegas. Derek Lunsford defends the Sandow. Get Finals, Expo & Amateur tickets now.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,7 +164,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .expo-card p{color:var(--muted);font-size:.92rem}
 
 /* ============ SOCIAL ============ */
-.social{padding:110px 0;background:linear-gradient(180deg,var(--black),var(--near))}
+.social{padding:110px 0;background:#ecebe8}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:20px;align-items:start}
 @media(max-width:1000px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.ig-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:16px;margin:20px -24px 0;padding:0 24px 14px;scrollbar-width:none}.ig-grid::-webkit-scrollbar{display:none}.ig-grid .instagram-media{flex:0 0 82vw;scroll-snap-align:center}.swipe-hint{display:block}}
@@ -178,6 +178,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .section--light .expo-card{background:#fff;border:1px solid #e6e3de;box-shadow:0 12px 34px rgba(20,15,10,.07)}
 .section--light .expo-card h4{color:#1a1918}
 .section--light .expo-card p{color:#5c5a56}
+.section--light .venue-card{background:#fff;border:1px solid #e5e3de;box-shadow:0 12px 34px rgba(20,15,10,.06)}
+.section--light .venue-card h4{color:#161514}
+.section--light .venue-card address,.section--light .venue-card p{color:#5c5a56}
+.section--light .map-pill{border-color:#cfccc6;color:#1a1918}
+.section--light .map-pill:hover{border-color:#e8393d;background:rgba(210,45,49,.08)}
+.section--light .shuttle{color:#1a1918}
+.section--light .swipe-hint{color:#8a8781}
+.section--light .btn-ghost{border-color:rgba(20,20,20,.55);color:#1a1918}
+.section--light .btn-ghost:hover{border-color:#e8393d;background:rgba(210,45,49,.08)}
+.sponsor-cell{transition:transform .15s ease}
+.sponsor-cell:hover{transform:scale(1.05)}
+.title-sponsors a{display:inline-flex}
 .section-banner{display:block;margin:44px 0 40px;border:1px solid rgba(210,45,49,.4);box-shadow:0 18px 50px rgba(0,0,0,.25);transition:transform .18s ease}
 .section-banner:hover{transform:translateY(-3px)}
 .section-banner img{width:100%;display:block}
@@ -192,24 +204,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 
 /* ============ TICKETS ============ */
 .tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
-.tix-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:56px;align-items:stretch}
-.tix-card{background:var(--panel);border:1px solid rgba(210,45,49,.3);padding:38px 32px;display:flex;flex-direction:column;position:relative}
-.tix-card.featured{border:2px solid var(--gold);box-shadow:0 0 60px rgba(210,45,49,.25);background:linear-gradient(180deg,#1d0e0f,var(--panel))}
-.tix-flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#ffffff;font-family:var(--head);font-weight:700;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;padding:6px 18px;white-space:nowrap}
-.tix-flag.red{background:var(--red);color:var(--white)}
-.tix-card h3{font-family:var(--display);font-size:1.9rem;text-transform:uppercase;margin-bottom:4px}
-.tix-card .tix-sub{font-family:var(--head);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.tix-card ul{list-style:none;display:grid;gap:11px;margin-bottom:28px;flex:1}
-.tix-card li{padding-left:26px;position:relative;color:var(--muted);font-size:.92rem}
-.tix-card li::before{content:"★";position:absolute;left:0;color:var(--gold);font-size:.8rem}
-.tix-card li strong{color:var(--white)}
-.tix-card .btn{width:100%;padding:16px 8px;white-space:nowrap;font-size:.95rem;letter-spacing:.1em}
-.tix-card.soldout{opacity:.65}
-.tix-card.soldout .btn{background:none;border:2px solid #4a4a4a;color:#8a8a8a;pointer-events:none}
+.tix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px;align-items:stretch}
+@media(max-width:1100px){.tix-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.tix-grid{grid-template-columns:1fr}}
+.tix-card{background:var(--panel);border:1px solid rgba(210,45,49,.3);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.tix-card:hover{transform:translateY(-4px);border-color:rgba(240,73,77,.75);box-shadow:0 20px 55px rgba(0,0,0,.55)}
+.tix-card.featured{border:2px solid var(--gold);box-shadow:0 0 60px rgba(210,45,49,.28);background:linear-gradient(180deg,#1d0e0f,var(--panel))}
+.tix-flag{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:3;background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#fff;font-family:var(--head);font-weight:700;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;padding:7px 18px;white-space:nowrap}
+.tix-media{position:relative;height:150px;flex:none}
+.tix-media img{width:100%;height:100%;object-fit:cover;display:block}
+.tix-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,7,.05) 35%,rgba(20,17,17,.96) 100%)}
+.tix-chip{position:absolute;bottom:10px;left:12px;z-index:2;font-family:var(--head);font-weight:700;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;padding:6px 12px;background:rgba(7,7,7,.82);border:1px solid rgba(255,255,255,.28);color:#fff}
+.tix-chip.hot{background:linear-gradient(180deg,#f0494d,#a81f23);border-color:rgba(255,255,255,.2)}
+.tix-chip.dead{color:#9a9a9a;border-color:rgba(255,255,255,.15)}
+.tix-body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.tix-body h3{font-family:var(--display);font-size:1.75rem;text-transform:uppercase;margin-bottom:4px}
+.tix-sub{font-family:var(--head);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:18px}
+.tix-body ul{list-style:none;display:grid;gap:10px;margin-bottom:24px;flex:1}
+.tix-body li{padding-left:24px;position:relative;color:var(--muted);font-size:.9rem}
+.tix-body li::before{content:"\2605";position:absolute;left:0;color:var(--gold);font-size:.75rem}
+.tix-body li strong{color:var(--white)}
+.tix-card .btn{width:100%;padding:15px 8px;white-space:nowrap;font-size:.92rem;letter-spacing:.1em}
+.tix-card.soldout .tix-media img{filter:grayscale(65%) brightness(.8)}
+.tix-card.soldout .btn{background:none;border:2px solid #4a4a4a;color:#8a8a8a;pointer-events:none;box-shadow:none}
 .tix-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:30px}
 
 /* ============ VENUES ============ */
-.venues{padding:110px 0;background:linear-gradient(180deg,#1c1a1a,#131212)}
+.venues{padding:110px 0;background:#f6f5f2}
 .venue-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:52px}
 .venue-card{border:1px solid rgba(210,45,49,.25);background:var(--panel);padding:34px 30px}
 .venue-card .vlabel{font-family:var(--head);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:600}
@@ -269,7 +290,7 @@ footer a:hover{color:var(--gold)}
     <div class="hero-copy">
       <div class="hero-date">September 24&ndash;27, 2026 <b>&bull;</b> Las Vegas</div>
       <h1><span class="h1-kicker">The Top of the</span> <span class="accent">Mountain</span></h1>
-      <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas &mdash; be in the building when history happens.</p>
+      <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas. Be in the building when history happens.</p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
         <a class="btn btn-ghost" href="#weekend">See the Schedule</a>
@@ -292,8 +313,8 @@ footer a:hover{color:var(--gold)}
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-inner">
-    <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals — Orleans Arena</span><span>★ Saturday Night — Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
-    <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals — Orleans Arena</span><span>★ Saturday Night — Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
+    <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals at Orleans Arena</span><span>★ Saturday Night: Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
+    <span>★ Sept 24–27 • Las Vegas</span><span>★ Friday Night Finals at Orleans Arena</span><span>★ Saturday Night: Mr. Olympia Crowned</span><span>★ Olympia World Fitness Expo</span><span>★ Tickets On Sale Now</span>
   </div>
 </div>
 
@@ -304,7 +325,7 @@ footer a:hover{color:var(--gold)}
       <div class="me-copy">
         <div class="eyebrow">The Main Event</div>
         <h2 class="section-title">The Sandow Is <span class="gold-text">On The Line</span></h2>
-        <p><strong>Derek Lunsford did what only Jay Cutler had ever done</strong> — he lost the Sandow, and he took it back. Now the reigning, defending Mr. Olympia walks into Orleans Arena with every hungry challenger on the planet gunning for the greatest prize in the sport.</p>
+        <p><strong>Derek Lunsford did what only Jay Cutler had ever done</strong>: he lost the Sandow, and he took it back. Now the reigning, defending Mr. Olympia walks into Orleans Arena with every hungry challenger on the planet gunning for the greatest prize in the sport.</p>
         <p>The heaviest hitters in bodybuilding. One stage. One judge's call. And a Las Vegas crowd that will lose its mind when the final pose hits. <strong>You don't watch this one on your phone. You're there.</strong></p>
         <a class="btn btn-gold" href="#tickets">Be There When It Happens</a>
       </div>
@@ -397,9 +418,9 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Opening Day at the Palms</h4>
         <ul>
-          <li><b>6:00 AM</b><span><strong>Olympia × Dragon's Lair Pop-Up Gym</strong> — <a href="https://www.palms.com/" target="_blank" rel="noopener">at the Palms</a>, train where the pros train, open to the public all day</span></li>
-          <li><b>12:00 PM</b><span><strong>Olympia Press Conference</strong> — <a href="https://www.palms.com/entertainment/pearl-theater" target="_blank" rel="noopener">Pearl Theater</a>. Face-offs, callouts, and the first sparks of the weekend</span></li>
-          <li><b>7:00 PM</b><span><strong>Superstar Kickoff Party</strong> — <a href="https://www.palms.com/experiences/palms-pool" target="_blank" rel="noopener">Palms Pool</a>. The athletes, the brands, the scene. Vegas is officially on notice</span></li>
+          <li><b>6:00 AM</b><span><strong>Olympia × Dragon's Lair Pop-Up Gym</strong> at <a href="https://www.palms.com/" target="_blank" rel="noopener">the Palms</a>. Train where the pros train, open to the public all day</span></li>
+          <li><b>12:00 PM</b><span><strong>Olympia Press Conference</strong> at the <a href="https://www.palms.com/entertainment/pearl-theater" target="_blank" rel="noopener">Pearl Theater</a>. Face-offs, callouts, and the first sparks of the weekend</span></li>
+          <li><b>7:00 PM</b><span><strong>Superstar Kickoff Party</strong> at the <a href="https://www.palms.com/experiences/palms-pool" target="_blank" rel="noopener">Palms Pool</a>. The athletes, the brands, the scene. Vegas is officially on notice</span></li>
         </ul>
       </div>
     </div>
@@ -413,9 +434,9 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Six Titles Decided in One Night</h4>
         <ul>
-          <li><b>9:00 AM</b><span><strong>Olympia World Fitness Expo opens</strong> — <a href="https://www.lvcva.com/" target="_blank" rel="noopener">Las Vegas Convention Center</a> South Hall (VIP entry 8 AM)</span></li>
-          <li><b>9:30 AM</b><span><strong>Pre-Judging</strong> — 212, Classic Physique, Figure, Women's Physique, Ms. Olympia, Wellness</span></li>
-          <li><b>6:00 PM</b><span><strong>Friday Finals at <a href="https://www.orleansarena.com/" target="_blank" rel="noopener">Orleans Arena</a></strong> — six champions crowned, PLUS Mr. Olympia Pre-Judging. Lunsford and the contenders hit the stage for the first time</span></li>
+          <li><b>9:00 AM</b><span><strong>Olympia World Fitness Expo opens</strong> at the <a href="https://www.lvcva.com/" target="_blank" rel="noopener">Las Vegas Convention Center</a> South Hall (VIP entry 8 AM)</span></li>
+          <li><b>9:30 AM</b><span><strong>Pre-Judging</strong>: 212, Classic Physique, Figure, Women's Physique, Ms. Olympia, and Wellness</span></li>
+          <li><b>6:00 PM</b><span><strong>Friday Finals at <a href="https://www.orleansarena.com/" target="_blank" rel="noopener">Orleans Arena</a></strong>: six champions crowned, plus Mr. Olympia Pre-Judging. Lunsford and the contenders hit the stage for the first time</span></li>
         </ul>
       </div>
     </div>
@@ -429,10 +450,10 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Mr. Olympia Is Crowned</h4>
         <ul>
-          <li><b>9:00 AM</b><span><strong>Expo Day Two</strong> — last chance on the floor with the biggest brands and athletes in fitness</span></li>
-          <li><b>9:30 AM</b><span><strong>Pre-Judging</strong> — Men's Physique, Fitness, Bikini, plus Wheelchair &amp; Fit Model Olympia</span></li>
-          <li><b>7:00 PM</b><span><strong>Saturday Finals at <a href="https://www.orleansarena.com/" target="_blank" rel="noopener">Orleans Arena</a></strong> — Fitness, Men's Physique, Bikini… and then the moment the world is waiting for: <strong>the crowning of Mr. Olympia</strong></span></li>
-          <li><b>11:00 PM</b><span><strong>VIP After Party</strong> — <a href="https://www.palms.com/" target="_blank" rel="noopener">Kaos Nightclub at the Palms</a>. Celebrate with the champions</span></li>
+          <li><b>9:00 AM</b><span><strong>Expo Day Two</strong>: your last chance on the floor with the biggest brands and athletes in fitness</span></li>
+          <li><b>9:30 AM</b><span><strong>Pre-Judging</strong>: Men's Physique, Fitness, and Bikini, plus Wheelchair &amp; Fit Model Olympia</span></li>
+          <li><b>7:00 PM</b><span><strong>Saturday Finals at <a href="https://www.orleansarena.com/" target="_blank" rel="noopener">Orleans Arena</a></strong>: Fitness, Men's Physique, and Bikini. Then comes the moment the world is waiting for: <strong>the crowning of Mr. Olympia</strong></span></li>
+          <li><b>11:00 PM</b><span><strong>VIP After Party</strong> inside <a href="https://www.palms.com/" target="_blank" rel="noopener">Kaos Nightclub at the Palms</a>. Celebrate with the champions</span></li>
         </ul>
       </div>
     </div>
@@ -446,7 +467,7 @@ footer a:hover{color:var(--gold)}
       <div class="day-body">
         <h4>Learn From the Champions</h4>
         <ul>
-          <li><b>11:00 AM</b><span><strong>Olympia Champions Seminar</strong> — <a href="https://www.palms.com/meetings-and-events" target="_blank" rel="noopener">Palms Grand Ballroom</a>. The newly crowned champs break down how they did it, hours after the confetti falls</span></li>
+          <li><b>11:00 AM</b><span><strong>Olympia Champions Seminar</strong> at the <a href="https://www.palms.com/meetings-and-events" target="_blank" rel="noopener">Palms Grand Ballroom</a>. The newly crowned champs break down how they did it, hours after the confetti falls</span></li>
         </ul>
       </div>
     </div>
@@ -458,22 +479,22 @@ footer a:hover{color:var(--gold)}
   <div class="wrap">
     <div class="eyebrow">Friday &amp; Saturday • LV Convention Center</div>
     <h2 class="section-title">Olympia World <span class="gold-text">Fitness Expo</span></h2>
-    <a class="section-banner" href="https://www.gofevo.com/event/2026OlympiaWorldExpo" target="_blank" rel="noopener"><img src="images/expo-banner.jpg" alt="Experience the Olympia World Fitness Expo — where the fitness industry comes together"></a>
+    <a class="section-banner" href="https://www.gofevo.com/event/2026OlympiaWorldExpo" target="_blank" rel="noopener"><img src="images/expo-banner.jpg" alt="Experience the Olympia World Fitness Expo, where the fitness industry comes together"></a>
     <div class="expo-grid">
       <div class="expo-card">
         <div class="num">60+</div>
         <h4>The Biggest Brands</h4>
-        <p>GNC, Optimum Nutrition, Gymreapers, MYPROTEIN and dozens more — exclusive drops, samples, and deals you only get on the floor.</p>
+        <p>GNC, Optimum Nutrition, MYPROTEIN, and dozens more, with exclusive drops, samples, and deals you only get on the floor.</p>
       </div>
       <div class="expo-card">
         <div class="num">★</div>
         <h4>Meet the Olympians</h4>
-        <p>The legends and the champions of tomorrow — photos, signings, and moments you can't get anywhere else on earth.</p>
+        <p>The legends and the champions of tomorrow. Photos, signings, and moments you can't get anywhere else on earth.</p>
       </div>
       <div class="expo-card">
         <div class="num">2</div>
         <h4>Days of Mayhem</h4>
-        <p>Live athlete appearances, contests, and the amateur Olympia stage — the expo is an event all by itself.</p>
+        <p>Live athlete appearances, contests, and the amateur Olympia stage. The expo is an event all by itself.</p>
       </div>
       <div class="expo-card">
         <div class="num">1</div>
@@ -493,28 +514,28 @@ footer a:hover{color:var(--gold)}
       <p>Title sponsor Newtech leads 60+ of the biggest names in fitness onto the expo floor.</p>
     </div>
     <div class="title-sponsors">
-      <img src="images/sponsor-newtech.png" alt="Newtech Strength Equipment — Title Sponsor">
-      <img src="images/sponsor-integralmedica.png" alt="Integralmedica">
+      <a href="https://newtechworldwide.com" target="_blank" rel="noopener"><img src="images/sponsor-newtech.png" alt="Newtech Strength Equipment, Title Sponsor"></a>
+      <a href="https://integralmedica.com.br" target="_blank" rel="noopener"><img src="images/sponsor-integralmedica.png" alt="Integralmedica"></a>
     </div>
     <div class="sponsor-grid">
-      <div class="sponsor-cell"><img src="images/sponsor-gnc.jpg" alt="GNC" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-on.png" alt="ON" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-gymshark.png" alt="GYMSHARK" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-myprotein.png" alt="MYPROTEIN" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-mutant.png" alt="MUTANT" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-celsius.png" alt="CELSIUS" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-bsn.png" alt="BSN" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-raw.png" alt="RAW" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-beast.png" alt="BEAST" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-steelfit.png" alt="STEELFIT" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-protan.jpg" alt="PROTAN" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-titan.png" alt="TITAN" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-evogen.jpg" alt="EVOGEN" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-bum.png" alt="BUM" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-nebbia.jpg" alt="NEBBIA" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-npc.jpg" alt="NPC" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-ifbb.jpg" alt="IFBB" loading="lazy"></div>
-      <div class="sponsor-cell"><img src="images/sponsor-wings.png" alt="WINGS" loading="lazy"></div>
+      <a class="sponsor-cell" href="https://www.gnc.com" target="_blank" rel="noopener"><img src="images/sponsor-gnc.jpg" alt="GNC" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.optimumnutrition.com" target="_blank" rel="noopener"><img src="images/sponsor-on.png" alt="ON" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.gymshark.com" target="_blank" rel="noopener"><img src="images/sponsor-gymshark.png" alt="GYMSHARK" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.myprotein.com" target="_blank" rel="noopener"><img src="images/sponsor-myprotein.png" alt="MYPROTEIN" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.mutantnation.com" target="_blank" rel="noopener"><img src="images/sponsor-mutant.png" alt="MUTANT" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.celsius.com" target="_blank" rel="noopener"><img src="images/sponsor-celsius.png" alt="CELSIUS" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.gobsn.com" target="_blank" rel="noopener"><img src="images/sponsor-bsn.png" alt="BSN" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://getrawnutrition.com" target="_blank" rel="noopener"><img src="images/sponsor-raw.png" alt="RAW" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://beastsports.com" target="_blank" rel="noopener"><img src="images/sponsor-beast.png" alt="BEAST" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://steelfitusa.com" target="_blank" rel="noopener"><img src="images/sponsor-steelfit.png" alt="STEELFIT" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://protanusa.com" target="_blank" rel="noopener"><img src="images/sponsor-protan.jpg" alt="PROTAN" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://titanmedicalcenter.com" target="_blank" rel="noopener"><img src="images/sponsor-titan.png" alt="TITAN" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://evogennutrition.com" target="_blank" rel="noopener"><img src="images/sponsor-evogen.jpg" alt="EVOGEN" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://gotbum.com" target="_blank" rel="noopener"><img src="images/sponsor-bum.png" alt="BUM" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://nebbia.fitness" target="_blank" rel="noopener"><img src="images/sponsor-nebbia.jpg" alt="NEBBIA" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://npcnewsonline.com" target="_blank" rel="noopener"><img src="images/sponsor-npc.jpg" alt="NPC" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://www.ifbbpro.com" target="_blank" rel="noopener"><img src="images/sponsor-ifbb.jpg" alt="IFBB" loading="lazy"></a>
+      <a class="sponsor-cell" href="https://wingsofstrength.net" target="_blank" rel="noopener"><img src="images/sponsor-wings.png" alt="WINGS" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -525,57 +546,68 @@ footer a:hover{color:var(--gold)}
     <div class="sched-head">
       <div class="eyebrow">On Sale Now</div>
       <h2 class="section-title">Claim Your <span class="gold-text">Seat</span></h2>
-      <p style="color:var(--muted);margin-top:18px">VIP packages are already <strong style="color:var(--white)">SOLD OUT</strong>. Finals seats and Expo passes are moving. Lock yours before Vegas sells out.</p>
+      <p style="color:var(--muted);margin:18px auto 0;max-width:520px;line-height:1.6">VIP is gone. Finals seats are moving. Lock yours in before Vegas sells out.</p>
     </div>
-    <a class="section-banner" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener"><img src="images/arena-tickets.jpg" alt="Arena tickets now on sale — Orleans Arena, Las Vegas"></a>
+    <a class="section-banner" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener"><img src="images/arena-tickets.jpg" alt="Arena tickets now on sale at Orleans Arena, Las Vegas"></a>
     <div class="tix-grid">
       <div class="tix-card featured">
         <div class="tix-flag">Most Wanted</div>
-        <h3>Finals Tickets</h3>
-        <div class="tix-sub">Orleans Arena • Fri &amp; Sat</div>
-        <ul>
-          <li><strong>Friday Night:</strong> Finals of 212, Classic Physique, Figure, Women's Physique, Ms. Olympia &amp; Wellness — plus Mr. Olympia Pre-Judging</li>
-          <li><strong>Saturday Night:</strong> Finals of Fitness, Men's Physique, Bikini — and the crowning of <strong>Mr. Olympia</strong></li>
-          <li>Be in the arena for the biggest moment in bodybuilding</li>
-        </ul>
-        <a class="btn btn-gold" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener">Buy Finals Tickets</a>
+        <div class="tix-media"><img src="images/tickets-finals.jpg" alt="The Olympia finals stage" loading="lazy"><span class="tix-chip hot">Selling Fast</span></div>
+        <div class="tix-body">
+          <h3>Finals Tickets</h3>
+          <div class="tix-sub">Orleans Arena &bull; Fri &amp; Sat</div>
+          <ul>
+            <li><strong>Friday:</strong> six division finals plus Mr. Olympia Pre-Judging</li>
+            <li><strong>Saturday:</strong> the crowning of <strong>Mr. Olympia</strong></li>
+            <li>Be in the building for the biggest moment in bodybuilding</li>
+          </ul>
+          <a class="btn btn-gold" href="https://www.ticketmaster.com/artist/2261554?venueId=188586" target="_blank" rel="noopener">Buy Finals Tickets</a>
+        </div>
       </div>
       <div class="tix-card">
-        <h3>Expo Passes</h3>
-        <div class="tix-sub">LV Convention Center • Fri, Sat or Weekend</div>
-        <ul>
-          <li>Friday, Saturday, and full Weekend passes available</li>
-          <li>60+ brands, athlete meet &amp; greets, exclusive expo-only deals</li>
-          <li><strong>Expo Elite Status</strong> — early entry, ultimate access, limited quantity</li>
-        </ul>
-        <a class="btn btn-ghost" href="https://www.gofevo.com/event/2026OlympiaWorldExpo" target="_blank" rel="noopener">Buy Expo Passes</a>
+        <div class="tix-media"><img src="images/tickets-expo.jpg" alt="The Olympia World Fitness Expo floor" loading="lazy"><span class="tix-chip">On Sale Now</span></div>
+        <div class="tix-body">
+          <h3>Expo Passes</h3>
+          <div class="tix-sub">LV Convention Center &bull; Fri&ndash;Sat</div>
+          <ul>
+            <li>Friday, Saturday, or full <strong>Weekend</strong> passes</li>
+            <li>60+ brands and athlete meet &amp; greets</li>
+            <li><strong>Expo Elite:</strong> early entry, limited quantity</li>
+          </ul>
+          <a class="btn btn-gold" href="https://www.gofevo.com/event/2026OlympiaWorldExpo" target="_blank" rel="noopener">Buy Expo Passes</a>
+        </div>
       </div>
       <div class="tix-card">
-        <h3>Amateur Olympia</h3>
-        <div class="tix-sub">Watch the Next Generation</div>
-        <ul>
-          <li>See tomorrow's Olympians earn their shot on the amateur stage</li>
-          <li>The proving ground of the sport — where careers are born</li>
-        </ul>
-        <a class="btn btn-ghost" href="https://www.axs.com/series/33701/2026-amateur-olympia-tickets?skin=palmscasinoresort" target="_blank" rel="noopener">Buy Amateur Tickets</a>
+        <div class="tix-media"><img src="images/hero-bg.jpg" alt="The Olympia crowd" loading="lazy"><span class="tix-chip">On Sale Now</span></div>
+        <div class="tix-body">
+          <h3>Amateur Olympia</h3>
+          <div class="tix-sub">Palms Casino Resort &bull; All Weekend</div>
+          <ul>
+            <li>Tomorrow's Olympians fight for a <strong>pro card</strong></li>
+            <li>The proving ground where careers are born</li>
+          </ul>
+          <a class="btn btn-gold" href="https://www.axs.com/series/33701/2026-amateur-olympia-tickets?skin=palmscasinoresort" target="_blank" rel="noopener">Buy Amateur Tickets</a>
+        </div>
       </div>
       <div class="tix-card soldout">
-        <div class="tix-flag red">Sold Out</div>
-        <h3>VIP Packages</h3>
-        <div class="tix-sub">Gone. Every Last One.</div>
-        <ul>
-          <li>Sandow photo ops, VIP entry, after party at Kaos — claimed within days</li>
-          <li>Don't let Finals tickets go the same way</li>
-        </ul>
-        <span class="btn">Sold Out</span>
+        <div class="tix-media"><img src="images/tickets-vip.jpg" alt="VIP packages, sold out" loading="lazy"><span class="tix-chip dead">Sold Out</span></div>
+        <div class="tix-body">
+          <h3>VIP Packages</h3>
+          <div class="tix-sub">Gone. Every Last One.</div>
+          <ul>
+            <li>Sandow photo ops, VIP entry, and the Kaos after party. Claimed within days</li>
+            <li>Don't let Finals tickets go the same way</li>
+          </ul>
+          <span class="btn">Sold Out</span>
+        </div>
       </div>
     </div>
-    <p class="tix-note">Finals tickets fulfilled via Ticketmaster • Expo passes via Fevo • Amateur Olympia via AXS — all through the official Olympia ticket portal.</p>
+    <p class="tix-note">Finals via Ticketmaster &bull; Expo via Fevo &bull; Amateur via AXS. All official Olympia ticket partners.</p>
   </div>
 </section>
 
 <!-- VENUES -->
-<section class="venues" id="venues">
+<section class="venues section--light" id="venues">
   <div class="wrap">
     <div class="sched-head">
       <div class="eyebrow">Plan Your Takeover</div>
@@ -586,13 +618,13 @@ footer a:hover{color:var(--gold)}
         <div class="vlabel">The Arena</div>
         <h4>Orleans Arena</h4>
         <address>4500 W Tropicana Ave, Las Vegas</address>
-        <p>Friday &amp; Saturday night Finals. This is where the Sandow changes hands — or doesn't.</p>
+        <p>Friday &amp; Saturday night Finals. This is where the Sandow changes hands, or doesn't.</p>
         <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Orleans+Arena%2C+4500+W+Tropicana+Ave%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
       <div class="venue-card">
         <div class="vlabel">The Expo</div>
         <h4>LV Convention Center</h4>
-        <address>3150 Paradise Rd — South Hall</address>
+        <address>3150 Paradise Rd, South Hall</address>
         <p>The Olympia World Fitness Expo, Friday and Saturday. The floor where the whole industry shows up.</p>
         <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Las+Vegas+Convention+Center+South+Hall%2C+3150+Paradise+Rd%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
@@ -604,13 +636,13 @@ footer a:hover{color:var(--gold)}
         <a class="map-pill" href="https://www.google.com/maps/search/?api=1&query=Palms+Casino+Resort%2C+4321+W+Flamingo+Rd%2C+Las+Vegas%2C+NV" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Get Directions</a>
       </div>
     </div>
-    <a class="section-banner" href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener"><img src="images/palms-banner.jpg" alt="The Palms Casino Resort — official host hotel of the 2026 Olympia"></a>
+    <a class="section-banner" href="https://mrolympia.com/travel-accommodations" target="_blank" rel="noopener"><img src="images/palms-banner.jpg" alt="The Palms Casino Resort, official host hotel of the 2026 Olympia"></a>
     <div class="shuttle">Free shuttles run between all venues every 20 minutes, Friday &amp; Saturday</div>
   </div>
 </section>
 
 <!-- SOCIAL -->
-<section class="social" id="social">
+<section class="social section--light" id="social">
   <div class="wrap">
     <div class="sched-head">
       <div class="eyebrow">@mrolympiallc</div>
