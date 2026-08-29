@@ -82,8 +82,8 @@ img{max-width:100%}
 a{color:inherit}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .gold-text{background:linear-gradient(180deg,#ff5e62 0%,#e8393d 55%,#c1272b 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.35em;text-transform:uppercase;font-size:clamp(1.3rem,2vw,1.65rem);color:var(--gold);margin-bottom:8px}
-.section-title{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.12;text-transform:uppercase;letter-spacing:.01em}
+.eyebrow{font-family:var(--head);font-weight:600;letter-spacing:.35em;text-transform:uppercase;font-size:clamp(1.6rem,2.6vw,2.2rem);color:var(--gold);margin-bottom:10px}
+.section-title{font-family:var(--display);font-size:clamp(3rem,7.5vw,5.8rem);line-height:1.1;text-transform:uppercase;letter-spacing:.01em}
 .btn{display:inline-block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;text-align:center;padding:19px 46px;font-size:1.05rem;border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease,background .15s ease}
 .btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold) 55%,var(--gold-lo));color:#ffffff;box-shadow:0 0 0 1px rgba(240,73,77,.5),0 8px 30px rgba(210,45,49,.35)}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(240,73,77,.7),0 14px 40px rgba(210,45,49,.5)}
@@ -126,25 +126,33 @@ nav .nav-logo img{height:108px;margin-top:46px;clip-path:polygon(38% 0,100% 0,10
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
 
 /* ============ COUNTDOWN ============ */
-.countdown{display:flex;gap:12px;justify-content:center;margin-bottom:44px}
+.countdown{display:flex;gap:12px;justify-content:center;margin-bottom:26px}
 .cd-cell{background:rgba(7,7,7,.62);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.16);border-bottom:2px solid #e8393d;min-width:86px;padding:15px 12px 13px;text-align:center}
 .cd-cell b{display:block;font-family:var(--display);font-size:2.4rem;line-height:1;color:#fff}
 .cd-cell span{font-family:var(--head);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:#f0494d;margin-top:4px;display:block}
 @media(max-width:640px){
   .hero{padding:100px 20px 0}
-  .cd-cell{min-width:70px;padding:12px 8px 10px}
-  .cd-cell b{font-size:1.9rem}
+  .cd-cell{min-width:58px;padding:9px 6px 8px;border-bottom-width:1px}
+  .cd-cell b{font-size:1.45rem}
+  .cd-cell span{font-size:.56rem;letter-spacing:.22em}
+  .countdown{gap:8px}
+  .hero h1 .accent{font-size:clamp(5.6rem,17vw,7rem)}
+  .hero h1 .h1-kicker{font-size:clamp(1.6rem,6vw,2.1rem);letter-spacing:.24em}
+  .hero-tag{text-wrap:initial;max-width:none}
 }
 
 /* ============ MARQUEE ============ */
-.marquee{background:linear-gradient(90deg,#8f1a1d,#d22d31,#8f1a1d);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;border-top:1px solid rgba(0,0,0,.4);border-bottom:1px solid rgba(0,0,0,.4)}
-.marquee-inner{display:inline-block;animation:scroll 28s linear infinite;font-family:var(--head);font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.9rem}
+.marquee{background:linear-gradient(90deg,#8f1a1d,#d22d31,#8f1a1d);color:#fff;overflow:hidden;white-space:nowrap;padding:18px 0;border-top:1px solid rgba(0,0,0,.4);border-bottom:1px solid rgba(0,0,0,.4)}
+.marquee-inner{display:inline-block;animation:scroll 28s linear infinite;font-family:var(--head);font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:1.05rem}
 .marquee-inner span{margin:0 28px}
 .marquee-inner .tro{font-style:normal;filter:brightness(0) invert(1)}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ============ MAIN EVENT ============ */
-.main-event{padding:110px 0;background:linear-gradient(180deg,var(--black),var(--near))}
+.main-event{padding:110px 0;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--black),var(--near))}
+/* Sandow trophy photo: Wallacy Ferrari, CC BY 4.0, via Wikimedia Commons */
+.main-event::before{content:"";position:absolute;left:calc(50% - 320px);top:60px;width:430px;height:640px;background:url('images/sandow-ghost.jpg') top/contain no-repeat;opacity:.045;filter:grayscale(1) contrast(1.2) brightness(1.6);pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 40%,transparent 78%);mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 40%,transparent 78%)}
+.main-event .wrap{position:relative;z-index:2}
 .me-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 @media(max-width:880px){.me-grid{grid-template-columns:1fr}}
 .me-copy p{color:var(--muted);margin:22px 0;font-size:1.05rem}
@@ -161,7 +169,7 @@ nav .nav-logo img{height:108px;margin-top:46px;clip-path:polygon(38% 0,100% 0,10
 .champ-meta b{color:var(--gold-hi)}
 .champs-row{margin-top:90px}
 .champs-head{text-align:center;margin-bottom:44px}
-.champs-head .champs-title{font-size:clamp(2rem,4.4vw,3.4rem);margin-top:6px}
+.champs-head .champs-title{font-size:clamp(2.6rem,6vw,4.6rem);margin-top:6px}
 .champs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .champ-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;background:linear-gradient(165deg,#1c1717,#100d0d);border:1px solid rgba(210,45,49,.32);padding:26px 24px 20px;text-decoration:none;overflow:hidden;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .champ-tile::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 220px at 100% 0%,rgba(210,45,49,.2),transparent 62%);pointer-events:none}
@@ -179,6 +187,7 @@ nav .nav-logo img{height:108px;margin-top:46px;clip-path:polygon(38% 0,100% 0,10
 
 /* ============ SCHEDULE ============ */
 .schedule{padding:110px 0;background:linear-gradient(180deg,#1c1a1a,#121111)}
+.schedule .sched-head{max-width:none;margin-bottom:34px}
 .sched-head{text-align:center;max-width:760px;margin:0 auto 60px}
 .sched-head p{color:var(--muted);margin-top:18px}
 .day-card{display:grid;grid-template-columns:220px 1fr;gap:0;background:var(--panel);border:1px solid rgba(210,45,49,.25);margin-bottom:22px;overflow:hidden}
@@ -379,10 +388,10 @@ footer a:hover{color:var(--gold)}
 @media(max-width:680px){
   .main-event,.schedule,.expo,.tickets,.venues,.hotel,.faq{padding:64px 0}
   .final-cta{padding:88px 20px}
-  .eyebrow{font-size:.9rem;letter-spacing:.2em;line-height:1.5;margin-bottom:10px}
+  .eyebrow{font-size:1.05rem;letter-spacing:.24em;line-height:1.5;margin-bottom:10px}
   .hero-date{flex-direction:column;gap:5px;letter-spacing:.2em}
   .hero-date::before,.hero-date::after,.hero-date b{display:none}
-  .section-title{line-height:1.28}
+  .section-title{line-height:1.2;font-size:clamp(2.7rem,10.5vw,3.4rem)}
   .final-cta h2{line-height:1.08;margin-bottom:18px}
   .final-cta p{margin-bottom:32px}
   .sched-head{margin-bottom:38px}
@@ -393,6 +402,8 @@ footer a:hover{color:var(--gold)}
   .me-grid{gap:38px}
   .champ-card .champ-label,.champ-card .champ-name,.champ-card .champ-meta{margin-left:24px;margin-right:24px}
   .champs-row{margin-top:56px}
+  .main-event{padding-bottom:16px}
+  .schedule{padding-top:40px}
   .champs-head{margin-bottom:30px}
   .champ-tile{padding:22px 20px 18px}
   .ct-name{min-height:0}
@@ -467,17 +478,17 @@ footer a:hover{color:var(--gold)}
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-date">September 24&ndash;27, 2026 <b>&bull;</b> Las Vegas</div>
-    <h1><span class="h1-kicker">The Top of the</span> <span class="accent">Mountain</span></h1>
-    <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas. Be in the building when history happens.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
-      <a class="btn btn-ghost" href="#weekend">See the Schedule</a>
-    </div>
     <div class="countdown" id="countdown" aria-label="Countdown to Olympia weekend">
       <div class="cd-cell"><b id="cd-d">&ndash;</b><span>Days</span></div>
       <div class="cd-cell"><b id="cd-h">&ndash;</b><span>Hours</span></div>
       <div class="cd-cell"><b id="cd-m">&ndash;</b><span>Mins</span></div>
       <div class="cd-cell"><b id="cd-s">&ndash;</b><span>Secs</span></div>
+    </div>
+    <h1><span class="h1-kicker">The Top of the</span> <span class="accent">Mountain</span></h1>
+    <p class="hero-tag">Four days. Eleven Olympia titles. One Sandow. Joe Weider&rsquo;s Olympia returns to Las Vegas. Be in the building when history happens.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#tickets">Get Tickets Now</a>
+      <a class="btn btn-ghost" href="#weekend">See the Schedule</a>
     </div>
     <div class="hero-video">
       <iframe src="https://www.youtube.com/embed/njSC3gMfjjU?autoplay=1&mute=1&loop=1&playlist=njSC3gMfjjU&playsinline=1&rel=0" title="This Is The Olympia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="eager"></iframe>
@@ -964,7 +975,9 @@ footer a:hover{color:var(--gold)}
   var tracks = [].slice.call(document.querySelectorAll('.ig-grid'));
   if (!tracks.length) return;
   tracks.forEach(function(track){
-    var paused = false;
+    var paused = false, hovered = false;
+    track.addEventListener('mouseenter', function(){ hovered = true; });
+    track.addEventListener('mouseleave', function(){ hovered = false; });
     ['pointerdown','touchstart'].forEach(function(e){ track.addEventListener(e, function(){ paused = true; }, {passive:true}); });
     ['pointerup','pointercancel','touchend'].forEach(function(e){ track.addEventListener(e, function(){ setTimeout(function(){ paused = false; }, 1200); }, {passive:true}); });
     window.addEventListener('load', function(){
@@ -974,7 +987,9 @@ footer a:hover{color:var(--gold)}
         var mobile = window.matchMedia('(max-width: 680px)');
         function step(){
           if (!paused){
-            track.scrollLeft += mobile.matches ? 0.55 : 1.4;
+            var speed = mobile.matches ? 0.55 : 1.4;
+            if (hovered) speed *= 0.35;
+            track.scrollLeft += speed;
             var half = track.scrollWidth / 2;
             if (half > 0 && track.scrollLeft >= half) track.scrollLeft -= half;
           }
