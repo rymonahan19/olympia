@@ -177,7 +177,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .sched-head{text-align:center;max-width:760px;margin:0 auto 60px}
 .sched-head p{color:var(--muted);margin-top:18px}
 .day-card{display:grid;grid-template-columns:220px 1fr;gap:0;background:var(--panel);border:1px solid rgba(210,45,49,.25);margin-bottom:22px;overflow:hidden}
-@media(max-width:760px){.day-card{grid-template-columns:1fr}}
+@media(max-width:760px){
+  .day-card{grid-template-columns:1fr}
+  .day-cards{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(50% - 50vw);padding:0 20px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .day-cards::-webkit-scrollbar{display:none}
+  .day-cards .day-card{flex:0 0 84vw;scroll-snap-align:center;margin-bottom:0}
+  .schedule .swipe-hint{display:block}
+}
 .day-side{background:linear-gradient(160deg,rgba(210,45,49,.16),rgba(210,45,49,.03));padding:32px 26px;border-right:1px solid rgba(210,45,49,.25);display:flex;flex-direction:column;justify-content:center}
 @media(max-width:760px){.day-side{border-right:none;border-bottom:1px solid rgba(210,45,49,.25)}}
 .day-side .dnum{font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--gold-hi)}
@@ -198,7 +204,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .expo{padding:110px 0;background:#f5f4f1}
 .expo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
 @media(max-width:1000px){.expo-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:540px){.expo-grid{grid-template-columns:1fr}}
+@media(max-width:540px){
+  .expo-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:36px calc(50% - 50vw) 0;padding:0 20px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .expo-grid::-webkit-scrollbar{display:none}
+  .expo-grid .expo-card{flex:0 0 78vw;scroll-snap-align:center}
+  .expo .swipe-hint{display:block;color:#8a8781}
+}
 .expo-card{background:var(--panel);border:1px solid rgba(210,45,49,.25);padding:32px 28px}
 .expo-card .num{font-family:var(--display);font-size:2.4rem;color:var(--gold)}
 .expo-card h4{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:1rem;margin:8px 0 10px}
@@ -236,7 +247,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,7,7,.9);ba
 .tickets{padding:110px 0;background:linear-gradient(180deg,var(--black) 0%,#160b0b 100%)}
 .tix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px;align-items:stretch}
 @media(max-width:1100px){.tix-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.tix-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:16px;margin:46px -24px 0;padding:0 24px 14px;scrollbar-width:none}.tix-grid::-webkit-scrollbar{display:none}.tix-grid .tix-card{flex:0 0 84vw;scroll-snap-align:center}}
+@media(max-width:680px){.tix-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:16px;margin:46px -24px 0;padding:0 24px 14px;scrollbar-width:none}.tix-grid::-webkit-scrollbar{display:none}.tix-grid .tix-card{flex:0 0 84vw;scroll-snap-align:center}.tickets .swipe-hint{display:block}}
 .tix-card{background:var(--panel);border:1px solid rgba(210,45,49,.3);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .tix-card:hover{transform:translateY(-4px);border-color:rgba(240,73,77,.75);box-shadow:0 20px 55px rgba(0,0,0,.55)}
 .tix-card.featured{border:2px solid var(--gold);box-shadow:0 0 60px rgba(210,45,49,.28);background:linear-gradient(180deg,#1d0e0f,var(--panel))}
@@ -584,6 +595,8 @@ footer a:hover{color:var(--gold)}
       <p>This isn't a show. It's a takeover. From the Thursday kickoff party at the Palms to Sunday's champions seminar, Las Vegas belongs to the Olympia.</p>
     </div>
 
+    <div class="day-cards">
+
     <div class="day-card">
       <div class="day-side">
         <div class="dnum">24</div>
@@ -646,6 +659,9 @@ footer a:hover{color:var(--gold)}
         </ul>
       </div>
     </div>
+
+    </div>
+    <div class="swipe-hint">Swipe for more days →</div>
   </div>
 </section>
 
@@ -677,6 +693,7 @@ footer a:hover{color:var(--gold)}
         <p>Limited Expo Elite passes unlock early entry and the ultimate expo experience. When they're gone, they're gone.</p>
       </div>
     </div>
+    <div class="swipe-hint">Swipe to explore →</div>
   </div>
 </section>
 
@@ -741,6 +758,7 @@ footer a:hover{color:var(--gold)}
         </div>
       </div>
     </div>
+    <div class="swipe-hint">Swipe for ticket options →</div>
     <p class="tix-note">Finals via Ticketmaster &bull; Expo via Fevo &bull; Amateur via AXS. All official Olympia ticket partners.</p>
   </div>
 </section>
