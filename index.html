@@ -138,7 +138,11 @@ nav .nav-logo img{height:112px;margin-top:-18px;clip-path:polygon(38% 0,100% 0,1
 .cd-cell b{display:block;font-family:var(--display);font-size:2.4rem;line-height:1;color:#fff}
 .cd-cell span{font-family:var(--head);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:#f0494d;margin-top:4px;display:block}
 @media(max-width:640px){
-  .hero{padding:100px 20px 0}
+  .hero{padding:100px 20px 0;background:
+    linear-gradient(180deg,rgba(7,7,7,0) 0%,rgba(7,7,7,0) 40%,rgba(7,7,7,.75) 62%,#070707 78%),
+    linear-gradient(180deg,rgba(7,7,7,.35) 0%,rgba(7,7,7,.4) 100%),
+    url('images/hero-bg.jpg') center top/250% auto no-repeat,
+    var(--black)}
   .cd-cell{min-width:58px;padding:9px 6px 8px;border-bottom-width:1px}
   .cd-cell b{font-size:1.45rem}
   .cd-cell span{font-size:.56rem;letter-spacing:.22em}
@@ -178,7 +182,11 @@ nav .nav-logo img{height:112px;margin-top:-18px;clip-path:polygon(38% 0,100% 0,1
 .champs-head{text-align:center;margin-bottom:44px}
 .champs-head .champs-title{font-size:clamp(2.6rem,6vw,4.6rem);margin-top:6px}
 @media(min-width:900px){.champs-head .champs-title{font-size:clamp(3.6rem,8vw,100px);white-space:nowrap;line-height:1.04}}
-.champs-feed .champs-head .champs-title{font-size:clamp(1.7rem,3.2vw,2.6rem);white-space:nowrap;line-height:1.1;letter-spacing:.08em}
+@media(max-width:680px){
+  .champs-head .champs-title{font-size:clamp(2.9rem,13vw,3.5rem);line-height:1.12}
+  .champs-feed .champs-head .champs-title{white-space:normal!important;font-size:clamp(1.6rem,7vw,2rem)}
+}
+.champs-feed .champs-head .champs-title{font-size:clamp(1.3rem,3.2vw,2.6rem);white-space:nowrap;line-height:1.1;letter-spacing:.08em}
 .champs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .champ-tile{position:relative;display:flex;flex-direction:column;align-items:flex-start;background:linear-gradient(165deg,#1c1717,#100d0d);border:1px solid rgba(210,45,49,.32);padding:26px 24px 20px;text-decoration:none;overflow:hidden;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .champ-tile::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 220px at 100% 0%,rgba(210,45,49,.2),transparent 62%);pointer-events:none}
@@ -459,6 +467,9 @@ footer a:hover{color:var(--gold)}
   .hero h1{margin-bottom:18px}
   footer{padding-bottom:140px}
   .foot-inner{flex-direction:column;text-align:center;gap:18px}
+  .foot-inner .nav-logo{width:100%;justify-content:center}
+  .foot-inner .nav-logo img{width:80%;height:auto;clip-path:polygon(38% 0,100% 0,100% 67%,63% 67%,63% 100%,0 100%,0 40%,37% 40%,37% 33%,38% 33%)}
+  .final-cta h2{font-size:8.4vw;white-space:nowrap}
   .foot-links{justify-content:center}
 }
 </style>
