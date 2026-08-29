@@ -338,8 +338,11 @@ nav .nav-logo img{height:108px;margin-top:46px;clip-path:polygon(38% 0,100% 0,10
 .shuttle{margin-top:34px;text-align:center;font-family:var(--head);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:clamp(1.05rem,1.6vw,1.35rem);color:#fff;border:1px dashed rgba(210,45,49,.4);padding:22px}
 
 /* ============ FINAL CTA ============ */
-.final-cta{padding:150px 24px;text-align:center;background:
-  linear-gradient(180deg,rgba(7,7,7,.78),rgba(7,7,7,.88)),url('images/cta-mountain.jpg') center/cover no-repeat,var(--black)}
+.final-cta{padding:70px 24px 130px;text-align:center;background:
+  linear-gradient(180deg,#070707 0%,rgba(7,7,7,.82) 45%,rgba(7,7,7,.78) 100%),
+  url('images/cta-mountain.jpg') center bottom/100% auto no-repeat,var(--black)}
+@media(max-width:680px){.final-cta{background:
+  linear-gradient(180deg,rgba(7,7,7,.78),rgba(7,7,7,.88)),url('images/cta-mountain.jpg') center bottom/cover no-repeat,var(--black)}}
 .final-cta h2{font-family:var(--display);font-size:clamp(2.8rem,8vw,6rem);line-height:.92;text-transform:uppercase;margin-bottom:20px}
 .final-cta h2 .gold-text{display:block;font-size:clamp(4.6rem,14.6vw,13.5rem);line-height:1;white-space:nowrap;margin-top:6px}
 .final-cta p{color:var(--muted);max-width:560px;margin:0 auto 40px}
